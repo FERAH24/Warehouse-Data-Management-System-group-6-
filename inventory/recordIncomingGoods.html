@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>StockFlow</title>
+<link rel="stylesheet" href="incomingGoods.css">
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background:#f5f7fb;">
+
+<!-- HEADER -->
+<header style=" position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 20px 20px; box-shadow: 0 2px 3px rgba(0,0,0,0.2); z-index: 1000">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style=" background:#1E3B8B; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+        <img src="../assets/images/logo.png" style="width:18px;">
+      </div>
+      <h3 style="margin:0;">StockFlow</h3>
+    </div>
+
+    <!-- Right -->
+    <div style="display:flex; align-items:center; gap:15px; padding-right: 30px;">
+      <img src="../assets/images/search.png" style="width: 40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+      <img src="../assets/images/notification.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+      <img src="../assets/images/dashboard.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+      <div style="height: 46px; width: 46px; background-color: #1E3B8B; border-radius: 100%; display: flex; justify-content: center;"><img src="../assets/images/AZ.png" style="width:25px; align-self: center;"></div>
+    </div>
+
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div style="position: fixed; top: 80px; left: 0; width: 220px; height: 100vh; background: #1E3B8B; color: white;padding: 20px;">
+  <ul style="list-style:none; padding:0;">
+    <li style="padding:10px; border-radius:8px;"><a style="text-decoration: none; color: white; " href="#">Dashboard</a></li>
+    <li style="padding:10px;">Inventory</li>
+    <li style="padding:10px;">All Products</li>
+    <li style="padding:10px; background:rgba(255,255,255,0.2); border-radius:8px;">Incoming Goods</li>
+    <li style="padding:10px;">Outgoing Goods</li>
+    <li style="padding:10px;">Suppliers</li>
+    <li style="padding:10px;">Reports</li>
+  </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="margin-left: 300px; margin-top: 90px; padding: 20px;">
+
+    <!-- TOPBAR -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <div>
+            <h2>Incoming Goods</h2>
+            <p style="color: #64748B; margin-top: 8px;">Record and track all incoming goods and deliveries</p>
+        </div>
+
+        <div style="display:flex; gap:10px; margin: 0px 0px 20px 0px">
+            <button style="display: flex; gap: 8px; padding:12px 12px; border-radius:10px; border:2px solid #ddd; background:white; cursor:pointer;">
+                <img style="width: 20px;" src="../assets/images/export.png" alt="export">
+                <p style="color: #64748B; font-size: small; margin: auto 0px auto 0px;">Export</p>
+            </button>
+            <button style="display: flex; gap: 8px; padding:2px 12px; border-radius:10px; border:2px solid  #ddd; background:#1E3A8A; cursor:pointer;  box-shadow: 0 2px 7px rgba(0,0,0,0.2);">
+                <img style="width: 20px; height: 20px; align-self: center;" src="../assets/images/plus.png" alt="export">
+                <p style="color: white; margin-top: auto; margin-bottom: auto;">Record Incoming goods</p>
+            </button>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div style="display:flex; gap:105px; margin-bottom:20px;">
+        <div style="display: flex;">
+           <div style="display: flex; gap: 10px; background:white; padding:15px; border: 2px solid #E2E8F0; border-radius:10px; ">
+                <img style="width: 45px;  background-color: #1E3A8A14; padding: 12px; border-radius: 8px;" src="../assets/images/clipboard.png" alt="clipboard"> 
+                <div>
+                    <h2>128</h2>
+                    <p style="color: #64748B; font-size: small;">Total Deliveries (Month)</p> 
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
+                <img style="width: 45px;  background-color: #EDDCB0; padding: 12px; border-radius: 8px;" src="../assets/images/mark.png" alt="clipboard"> 
+                <div>
+                    <h2>15</h2>
+                    <p style="color: #64748B; font-size: small;">Received today</p> 
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
+                <img style="width: 45px;  background-color: #ECFFE4; padding: 12px; border-radius: 8px;" src="../assets/images/info.png" alt="clipboard"> 
+                <div>
+                    <h2>3</h2>
+                    <p style="color: #64748B; font-size: small;">Pending Verification</p> 
+                </div>
+            </div>  
+        </div>
+
+        <div style="display: flex; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
+            <img style="width: 45px; padding: 12px; border-radius: 8px;" src="../assets/images/copy.png" alt="clipboard"> 
+            <p style=" margin-top: 12px;">Delivery History</p>    
+        </div>  
+       
+    </div>
+
+    <div style="width: 65%;  background:white; border:1px solid #E2E8F0; border-radius:10px; padding:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <div style="margin:0; color:#1E293B; display: flex; gap: 12px;">
+                <img style="width: 20px;" src="../assets/images/edit.png" alt="edit"> 
+                <h3>Record Incoming Goods</h3>
+            </div>
+            <button style="background:#1E3A8A14; border:none; color: #1E3A8A; padding:10px 16px; border-radius:20px; cursor:pointer;">
+            New Entry
+            </button>
+        </div>
+
+        <!-- FORM GRID -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+            <!-- Select Product -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Select Product *</label>
+            <select style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;">
+                <option >— Choose product —</option>
+                 <option >— select 1 —</option>
+            </select>
+            </div>
+
+            <!-- Quantity -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Quantity Received *</label>
+            <input type="number" style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;">
+            </div>
+
+            <!-- Supplier -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Supplier *</label>
+            <select style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;"></select>
+            </div>
+
+            <!-- Warehouse -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Warehouse Location *</label>
+            <select style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;"></select>
+            </div>
+
+            <!-- Date -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Delivery Date *</label>
+            <input type="date" style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;">
+            </div>
+
+            <!-- Reference -->
+            <div>
+            <label style="font-size:13px; color:#64748B;">Reference / PO Number</label>
+            <input type="text" style="width:100%; padding:12px; margin-top:6px; border: none; background-color: #F8F8F8;"s>
+            </div>
+
+        </div>
+
+        <!-- NOTES -->
+        <div style="margin-top:20px;">
+            <label style="font-size:13px; color:#64748B;">Notes</label>
+            <textarea placeholder="Any additional delivery notes..." 
+            style="width:100%; padding:12px; margin-top:6px;border: none; background-color: #F8F8F8; height:50px;"></textarea>
+        </div>
+
+        <!-- BUTTONS -->
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+            <button style="padding:10px 18px; border:1px solid #CBD5E1; background:white; border-radius:10px; cursor:pointer;">
+            Clear
+            </button>
+
+            <button style="padding:10px 18px; background:#E2E8F0; border:none; border-radius:10px; cursor:pointer;">
+            ✔ Save Entry
+            </button>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
