@@ -1,205 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>StockFlow</title>
-<link rel="stylesheet" href="incomingGoods.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>StockFlow</title>
+        <link rel="stylesheet" href="incomingGoods.css">
+    </head>
 
-</head>
+    <body style="background:#f5f7fb;">
+        <!-- HEADER -->
+        <header style=" position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 20px 20px; box-shadow: 0 2px 3px rgba(0,0,0,0.2); z-index: 1000">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                <div style=" background:#1E3B8B; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+                    <img src="../assets/images/logo.png" style="width:18px;">
+                </div>
+                <h3 style="margin:0;">StockFlow</h3>
+                </div>
 
+                <!-- Right -->
+                <div style="display:flex; align-items:center; gap:15px; padding-right: 30px;">
+                <img src="../assets/images/search.png" style="width: 40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+                <img src="../assets/images/notification.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+                <img src="../assets/images/dashboard.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
+                <div style="height: 46px; width: 46px; background-color: #1E3B8B; border-radius: 100%; display: flex; justify-content: center;"><img src="../assets/images/AZ.png" style="width:25px; align-self: center;"></div>
+                </div>
+            </div>
+        </header>
 
-
-<body style="margin:0; font-family: Arial, sans-serif; background:#f5f7fb;">
-
-<!-- HEADER -->
-<header style=" position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 20px 20px; box-shadow: 0 2px 3px rgba(0,0,0,0.2); z-index: 1000">
-  <div style="display:flex; justify-content:space-between; align-items:center;">
-    <div style="display:flex; align-items:center; gap:10px;">
-      <div style=" background:#1E3B8B; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
-        <img src="../assets/images/logo.png" style="width:18px;">
-      </div>
-      <h3 style="margin:0;">StockFlow</h3>
-    </div>
-
-    <!-- Right -->
-    <div style="display:flex; align-items:center; gap:15px; padding-right: 30px;">
-      <img src="../assets/images/search.png" style="width: 40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
-      <img src="../assets/images/notification.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
-      <img src="../assets/images/dashboard.png" style="width:40px; border: 2px solid #D2D8E6; padding: 8px; border-radius: 8px;">
-      <div style="height: 46px; width: 46px; background-color: #1E3B8B; border-radius: 100%; display: flex; justify-content: center;"><img src="../assets/images/AZ.png" style="width:25px; align-self: center;"></div>
-    </div>
-
-  </div>
-</header>
-
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <ul>
-    <li class="menu-item active"><a href="#">Dashboard</a></li>
-    <li class="menu-item"><a href="#">Inventory</a></li>
-    <li class="menu-item"><a href="#">All Products</a></li>
-    <li class="menu-item"><a href="#">Incoming Goods</a></li>
-    <li class="menu-item"><a href="#">Outgoing Goods</a></li>
-    <li class="menu-item">
-      <a href="#">Suppliers</a>
-    </li>
-    <li class="menu-item">
-      <a href="#">Reports</a>
-    </li>
-  </ul>
-</div>
-
-<!-- MAIN CONTENT -->
-<div style="margin-left: 300px; margin-top: 90px; padding: 20px;">
-
-    <!-- TOPBAR -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <div>
-            <h2>Incoming Goods</h2>
-            <p style="color: #64748B; margin-top: 8px;">Record and track all incoming goods and deliveries</p>
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+        <ul>
+            <li class="menu-item active"><a href="#">Dashboard</a></li>
+            <li class="menu-item"><a href="#">Inventory</a></li>
+            <li class="menu-item"><a href="#">All Products</a></li>
+            <li class="menu-item"><a href="#">Incoming Goods</a></li>
+            <li class="menu-item"><a href="#">Outgoing Goods</a></li>
+            <li class="menu-item">
+            <a href="#">Suppliers</a>
+            </li>
+            <li class="menu-item">
+            <a href="#">Reports</a>
+            </li>
+        </ul>
         </div>
 
-        <div style="display:flex; gap:10px; margin: 0px 0px 20px 0px">
-            <button style="display: flex; gap: 8px; padding:12px 12px; border-radius:10px; border:2px solid #ddd; background:white; cursor:pointer;">
-                <img style="width: 20px;" src="../assets/images/export.png" alt="export">
-                <p style="color: #64748B; font-size: small; margin: auto 0px auto 0px;">Export</p>
-            </button>
-            <button style="display: flex; gap: 8px; padding:2px 12px; border-radius:10px; border:2px solid  #ddd; background:white; cursor:pointer;  box-shadow: 0 2px 7px rgba(0,0,0,0.2);">
-                <img style="width: 20px; height: 20px; align-self: center;" src="../assets/images/plus.png" alt="export">
-                <a href="../inventory/recordIncomingGoods.html" style="color: #64748B; margin-top: auto; margin-bottom: auto; text-decoration: none;">Record Incoming goods</a>
-            </button>
-        </div>
-    </div>
+        <!-- MAIN CONTENT -->
+        <div style="margin-left: 300px; margin-top: 90px; padding: 20px;">
 
-    <!-- CARDS -->
-    <div style="display:flex; gap:105px; margin-bottom:20px;">
-        <div style="display: flex;">
-           <div style="display: flex; gap: 10px; background:white; padding:15px; border: 2px solid #E2E8F0; border-radius:10px; ">
-                <img style="width: 45px;  background-color: #1E3A8A14; padding: 12px; border-radius: 8px;" src="../assets/images/clipboard.png" alt="clipboard"> 
+            <!-- TOPBAR -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
                 <div>
-                    <h2>128</h2>
-                    <p style="color: #64748B; font-size: small;">Total Deliveries (Month)</p> 
+                    <h2>Incoming Goods</h2>
+                    <p style="color: #64748B; margin-top: 8px;">Record and track all incoming goods and deliveries</p>
+                </div>
+
+                <div style="display:flex; gap:10px; margin: 0px 0px 20px 0px">
+                    <button style="display: flex; gap: 8px; padding:12px 12px; border-radius:10px; border:2px solid #ddd; background:white; cursor:pointer;">
+                        <img style="width: 20px;" src="../assets/images/export.png" alt="export">
+                        <p style="color: #64748B; font-size: small; margin: auto 0px auto 0px;">Export</p>
+                    </button>
+                    <button style="display: flex; gap: 8px; padding:2px 12px; border-radius:10px; border:2px solid  #ddd; background:white; cursor:pointer;  box-shadow: 0 2px 7px rgba(0,0,0,0.2);">
+                        <img style="width: 20px; height: 20px; align-self: center;" src="../assets/images/plus.png" alt="export">
+                        <a href="../inventory/recordIncomingGoods.html" style="color: #64748B; margin-top: auto; margin-bottom: auto; text-decoration: none;">Record Incoming goods</a>
+                    </button>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
-                <img style="width: 45px;  background-color: #EDDCB0; padding: 12px; border-radius: 8px;" src="../assets/images/mark.png" alt="clipboard"> 
-                <div>
-                    <h2>15</h2>
-                    <p style="color: #64748B; font-size: small;">Received today</p> 
+            <!-- CARDS -->
+            <div style="position: relative; margin-bottom:20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; width: 65%;">
+                <div style="display: flex; gap: 10px; background:white; padding:15px; border: 2px solid #E2E8F0; border-radius:10px; ">
+                        <img style="width: 45px;  background-color: #1E3A8A14; padding: 12px; border-radius: 8px;" src="../assets/images/clipboard.png" alt="clipboard"> 
+                        <div>
+                            <h2>128</h2>
+                            <p style="color: #64748B; font-size: small;">Total Deliveries (Month)</p> 
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
+                        <img style="width: 45px;  background-color: #EDDCB0; padding: 12px; border-radius: 8px;" src="../assets/images/mark.png" alt="clipboard"> 
+                        <div>
+                            <h2>15</h2>
+                            <p style="color: #64748B; font-size: small;">Received today</p> 
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
+                        <img style="width: 45px;  background-color: #ECFFE4; padding: 12px; border-radius: 8px;" src="../assets/images/info.png" alt="clipboard"> 
+                        <div>
+                            <h2>3</h2>
+                            <p style="color: #64748B; font-size: small;">Pending Verification</p> 
+                        </div>
+                    </div>  
                 </div>
+
+                <div style="position: absolute; top: 0px; right: 100px; display: flex; background:white;  border: 2px solid #E2E8F0; padding:0px 40px 0px 20px; border-radius:10px;">
+                    <img style="width: 45px; padding: 12px; border-radius: 8px;" src="../assets/images/copy.png" alt="clipboard"> 
+                    <p style=" margin-top: 12px;">Delivery History</p>    
+                </div>  
+            
             </div>
 
-            <div style="display: flex; gap: 10px; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
-                <img style="width: 45px;  background-color: #ECFFE4; padding: 12px; border-radius: 8px;" src="../assets/images/info.png" alt="clipboard"> 
-                <div>
-                    <h2>3</h2>
-                    <p style="color: #64748B; font-size: small;">Pending Verification</p> 
+            <!-- TABLE -->
+            <div style="background:white; padding:15px; border: 2px solid #E2E8F0; width: 60%;">
+                <div style="position: relative;">
+                    <div style="display: flex; gap: 5px;">
+                        <img style="width: 22px; background-color: #DBEAFE; border-radius: 6px; padding: 5px;" src="../assets/images/arrow-up.png" alt="arrow">
+                        <h3>Incoming Movements</h3>
+                    </div>
+                    <p style="font-size: small; color: #64748B; margin-left: 25px; margin-top: 10px;">34 shipments recieved today</p>
+                    <p style="position: absolute; top: 0px; right: 70px; color: #1E3A8A; font-size: 1.5em; font-weight: 700;">128</p>
                 </div>
-            </div>  
-        </div>
+            
+                <br>
+                <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+                    <thead style="background:#F1F5F9;">
+                        <tr style="color:#475569; text-align:left;">
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">SKU</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Product</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Supplier</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Qty</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Zone</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Time</th>
+                            <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Status</th>
+                        </tr>
+                    </thead>
 
-        <div style="display: flex; background:white;  border: 2px solid #E2E8F0; padding:15px; border-radius:10px;">
-            <img style="width: 45px; padding: 12px; border-radius: 8px;" src="../assets/images/copy.png" alt="clipboard"> 
-            <p style=" margin-top: 12px;">Delivery History</p>    
-        </div>  
-       
-    </div>
-
-    <!-- TABLE -->
-     <div style="background:white; padding:15px; border: 2px solid #E2E8F0; width: 70%;">
-        <div style="position: relative;">
-            <div style="display: flex; gap: 5px;">
-                <img style="width: 22px; background-color: #DBEAFE; border-radius: 6px; padding: 5px;" src="../assets/images/arrow-up.png" alt="arrow">
-                <h3>Incoming Movements</h3>
+                    <tbody id="tableBody"></tbody>
+                </table>
             </div>
-            <p style="font-size: small; color: #64748B; margin-left: 25px; margin-top: 10px;">34 shipments recieved today</p>
-            <p style="position: absolute; top: 0px; right: 70px; color: #1E3A8A; font-size: 1.5em; font-weight: 700;">128</p>
-        </div>
-    
-        <br>
-        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
-            <thead style="background:#F1F5F9;">
-                <tr style="color:#475569; text-align:left;">
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">SKU</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Product</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Supplier</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Qty</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Zone</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Time</th>
-                    <th style="padding:14px 12px; font-size:13px; text-transform:uppercase;">Status</th>
+
+            </div>
+
+            <script>
+                const data = [
+                { sku: "SF-4409", product: "Rice Bags 50kg", supplier: "Olam Nigeria", qty: 200, zone: "A-08", time: "07:45", status: "Received" },
+                { sku: "SF-4410", product: "PVC Fittings", supplier: "Bua Group", qty: 400, zone: "A-05", time: "09:15", status: "Delayed" },
+                { sku: "SF-4411", product: "Cement Bags", supplier: "Dangote", qty: 1500, zone: "A-02", time: "11:20", status: "In Transit" },
+                { sku: "SF-4412", product: "Chest Freezer", supplier: "Hisense", qty: 30, zone: "A-25", time: "13:40", status: "Received" },
+                { sku: "SF-4410", product: "PVC Fittings", supplier: "Bua Group", qty: 400, zone: "A-09", time: "09:15", status: "Delayed" },
+                { sku: "SF-4411", product: "Cement Bags", supplier: "Dangote", qty: 1500, zone: "A-07", time: "11:20", status: "In Transit" },
+                { sku: "SF-4412", product: "Chest Freezer", supplier: "Hisense", qty: 30, zone: "A-03", time: "13:40", status: "Received" }
+                ];
+
+                const tableBody = document.getElementById("tableBody");
+
+                data.forEach(item => {
+
+                let backgroundColor = "#DCFCE7";
+                let color = "#16A34A"
+                if (item.status === "Delayed") {
+                    backgroundColor = "#FEF3C7"
+                    color = "#D97706"
+                }
+                if (item.status === "In Transit") {
+                    backgroundColor = "#CFFAFE";
+                    color = "#0891B2"
+
+                }
+
+                const row = `
+                <tr style="border-bottom:1px solid #E2E8F0;">
+                    <td style="padding:16px 12px; color: #1E3A8A; font-size: small; font-weight: 700;">${item.sku}</td>
+                    <td style="padding:16px 12px; font-weight:500; color: #334155;">${item.product}</td>
+                    <td style="padding:16px 12px; color: #64748B;">${item.supplier}</td>
+                    <td style="padding:16px 12px; font-weight:600; color: #1E3A8A; font-size: small;">+${item.qty}</td>
+                    <td style="padding:16px 12px; font-weight:600; color: #1E3A8A; font-size: small;">●${item.zone}</td>
+                    <td style="padding:16px 12px; color: #94A3B8; font-size: small">${item.time}</td>
+                    <td style="padding:16px 12px;">
+                    <span style="
+                        background:${backgroundColor};
+                        color:${color};
+                        padding:6px 12px;
+                        border-radius:20px;
+                        font-size:12px;
+                        font-weight:700;
+                    ">
+                        ● ${item.status}
+                    </span>
+                    </td>
                 </tr>
-            </thead>
+                `;
 
-            <tbody id="tableBody"></tbody>
-        </table>
-    </div>
+                tableBody.innerHTML += row;
+                });
+            </script>
+            <script>
+        const links = document.querySelectorAll(".menu-item");
 
-    </div>
-
-    <script>
-        const data = [
-        { sku: "SF-4409", product: "Rice Bags 50kg", supplier: "Olam Nigeria", qty: 200, zone: "A-08", time: "07:45", status: "Received" },
-        { sku: "SF-4410", product: "PVC Fittings", supplier: "Bua Group", qty: 400, zone: "A-05", time: "09:15", status: "Delayed" },
-        { sku: "SF-4411", product: "Cement Bags", supplier: "Dangote", qty: 1500, zone: "A-02", time: "11:20", status: "In Transit" },
-        { sku: "SF-4412", product: "Chest Freezer", supplier: "Hisense", qty: 30, zone: "A-25", time: "13:40", status: "Received" },
-        { sku: "SF-4410", product: "PVC Fittings", supplier: "Bua Group", qty: 400, zone: "A-09", time: "09:15", status: "Delayed" },
-        { sku: "SF-4411", product: "Cement Bags", supplier: "Dangote", qty: 1500, zone: "A-07", time: "11:20", status: "In Transit" },
-        { sku: "SF-4412", product: "Chest Freezer", supplier: "Hisense", qty: 30, zone: "A-03", time: "13:40", status: "Received" }
-        ];
-
-        const tableBody = document.getElementById("tableBody");
-
-        data.forEach(item => {
-
-        let backgroundColor = "#DCFCE7";
-        let color = "#16A34A"
-        if (item.status === "Delayed") {
-            backgroundColor = "#FEF3C7"
-            color = "#D97706"
-        }
-        if (item.status === "In Transit") {
-            backgroundColor = "#CFFAFE";
-            color = "#0891B2"
-
-        }
-
-        const row = `
-        <tr style="border-bottom:1px solid #E2E8F0;">
-            <td style="padding:16px 12px; color: #1E3A8A; font-size: small; font-weight: 700;">${item.sku}</td>
-            <td style="padding:16px 12px; font-weight:500; color: #334155;">${item.product}</td>
-            <td style="padding:16px 12px; color: #64748B;">${item.supplier}</td>
-            <td style="padding:16px 12px; font-weight:600; color: #1E3A8A; font-size: small;">+${item.qty}</td>
-            <td style="padding:16px 12px; font-weight:600; color: #1E3A8A; font-size: small;">●${item.zone}</td>
-            <td style="padding:16px 12px; color: #94A3B8; font-size: small">${item.time}</td>
-            <td style="padding:16px 12px;">
-            <span style="
-                background:${backgroundColor};
-                color:${color};
-                padding:6px 12px;
-                border-radius:20px;
-                font-size:12px;
-                font-weight:700;
-            ">
-                ● ${item.status}
-            </span>
-            </td>
-        </tr>
-        `;
-
-        tableBody.innerHTML += row;
+        links.forEach((item) => {
+            item.addEventListener("click", () => {
+            document.querySelector(".menu-item.active")?.classList.remove("active");
+            item.classList.add("active");
+            });
         });
-    </script>
-    <script>
-  const links = document.querySelectorAll(".menu-item");
-
-  links.forEach((item) => {
-    item.addEventListener("click", () => {
-      document.querySelector(".menu-item.active")?.classList.remove("active");
-      item.classList.add("active");
-    });
-  });
-</script>
-</body>
+        </script>
+    </body>
 </html>
