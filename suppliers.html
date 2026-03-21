@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Suppliers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>StockFlow</h2>
+
+        <p class="section-title">OVERVIEW</p>
+        <ul>
+            <li><a href="#"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+        </ul>
+
+        <p class="section-title">INVENTORY</p>
+        <ul>
+            <li><a href="#"><i class='bx bx-box'></i> Inventory</a></li>
+            <li><a href="#"><i class='bx bx-package'></i> All Products</a></li>
+            <li><a href="#"><i class='bx bx-download'></i> Incoming Goods</a></li>
+            <li><a href="#"><i class='bx bx-upload'></i> Outgoing Goods</a></li>
+            <li class="active"><a href="suppliers.html"><i class='bx bx-user'></i> Suppliers</a></li>
+        </ul>
+
+        <p class="section-title">REPORTS</p>
+        <ul>
+            <li><a href="#"><i class='bx bx-bar-chart'></i> Reports</a></li>
+        </ul>
+
+        <p class="section-title">SYSTEM</p>
+        <ul>
+            <li><a href="#"><i class='bx bx-cog'></i> Settings</a></li>
+        </ul>
+    </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <div class="topbar">
+      <h1>Suppliers</h1>
+      <button class="btn-primary">+ Add Supplier</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">Total Suppliers <h2>48</h2></div>
+      <div class="card">Active Suppliers <h2>36</h2></div>
+      <div class="card">Pending Orders <h2>12</h2></div>
+      <div class="card">Avg Delivery <h2>4.2 days</h2></div>
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search suppliers...">
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Supplier</th>
+          <th>Contact</th>
+          <th>Address</th>
+          <th>Status</th>
+          <th>Delivery Rate</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="supplierTable">
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

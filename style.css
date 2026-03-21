@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #1e3a8a;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar .active {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+.section-title {
+  font-size: 12px;
+  margin: 20px 0 10px;
+  opacity: 0.6;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar ul li a:hover {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+.sidebar .active a {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+
+td button {
+  border: none;
+  background: #eee;
+  padding: 5px 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+td button:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Search */
+.search-bar {
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.active-status {
+  background: green;
+}
+
+.pending-status {
+  background: orange;
+}
+
+.inactive-status {
+  background: red;
+}
