@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StockFlow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <aside class="sidebar">
+
+    <p class="sidebar-section">OVERVIEW</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        Dashboard
+      </a>
+
+      <a href="#" class="nav-item active" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zm0 0V5a2 2 0 00-2-2H6a2 2 0 00-2 2v2"/>
+        </svg>
+        Inventory
+      </a>
+
+    </nav>
+
+    <p class="sidebar-section">INVENTORY</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/>
+        </svg>
+        All Products
+        <span class="nav-badge">8</span>
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <polyline points="1 4 1 10 7 10"/>
+          <path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+        </svg>
+        Incoming Goods
+        <span class="nav-badge">3</span>
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        Outgoing Goods
+      </a>
+
+    </nav>
+
+    <p class="sidebar-section">MANAGE</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+        </svg>
+        Suppliers
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        Reports
+      </a>
+
+    </nav>
+
+    <p class="sidebar-section">SYSTEM</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+        </svg>
+        Settings
+      </a>
+
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">AZ</div>
+      <div>
+        <p class="user-name">Ama Mensah</p>
+        <p class="user-role">Admin</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="main">
+
+    <div class="topbar">
+
+      <div class="topbar-logo">
+        <div class="logo-box">
+          <svg viewBox="0 0 24 24" fill="white" width="16" height="16">
+            <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zm0 12H4V9h16v10zM4 5h16V3H4v2z"/>
+          </svg>
+        </div>
+        <span class="logo-text">StockFlow</span>
+      </div>
+
+      <!-- <span class="breadcrumb">Previous page &rsaquo; <strong>Inventory</strong></span> -->
+
+      <div class="topbar-right">
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </button>
+
+        <div class="topbar-avatar">AZ</div>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Inventory</h1>
+          <p class="page-breadcrumb">Previous page &rsaquo; <span>Inventory</span></p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-outline">Stock Category</button>
+          <button class="btn btn-outline">Supplier Breakdown</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <p class="stat-label">Total Products</p>
+          <p class="stat-value blue">4,821</p>
+          <p class="stat-sub">+38 this week</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Total Stock Value</p>
+          <p class="stat-value green">128,948</p>
+          <p class="stat-sub">&#8358;128,948,000</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Low Stock Items</p>
+          <p class="stat-value orange">12</p>
+          <p class="stat-sub">Needs reorder</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Critical Items</p>
+          <p class="stat-value red">4</p>
+          <p class="stat-sub">Urgent attention</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+
+        <div class="filter-tabs">
+          <button class="tab active" onclick="filterByTab(this,'all')">All Stock <span class="tab-count">4821</span></button>
+          <button class="tab" onclick="filterByTab(this,'low')">Low Stock <span class="tab-count">44</span></button>
+          <button class="tab" onclick="filterByTab(this,'critical')">Critical <span class="tab-count">4</span></button>
+        </div>
+
+        <div class="toolbar-right">
+
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search by name, SKU, supplier…" />
+          </div>
+
+          <select class="select-filter" onchange="filterByZone(this.value)">
+            <option>All Zones</option>
+            <option>Zone A</option>
+            <option>Zone B</option>
+            <option>Zone C</option>
+          </select>
+
+          <select class="select-filter" onchange="filterByStatus(this.value)">
+            <option>All Status</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out of Stock</option>
+          </select>
+
+          <button class="btn btn-outline">Export CSV</button>
+          <button class="btn btn-outline">Export PDF</button>
+          <button class="btn btn-primary">+ Add Product</button>
+
+        </div>
+
+      </div>
+
+      <div class="table-panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Product Name</th>
+                <th>Supplier</th>
+                <th>Zone</th>
+                <th>Qty Available</th>
+                <th>Capacity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+        <div class="table-footer">
+          <span id="showing-text">Showing 1–7 of 4,821 products</span>
+          <div class="pagination">
+            <button class="pg-btn active">1</button>
+            <button class="pg-btn">2</button>
+            <button class="pg-btn">3</button>
+            <button class="pg-btn">…</button>
+            <button class="pg-btn">410</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-grid">
+
+        <div class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="panel-title">Stock by Category</p>
+              <p class="panel-sub">See distribution across product groups</p>
+            </div>
+            <button class="btn btn-outline">Details</button>
+          </div>
+          <div id="chart-rows"></div>
+        </div>
+
+        <div class="alerts-panel">
+          <p class="alert-section-title red-dot">Low Stock Alerts</p>
+          <div id="low-alerts"></div>
+          <hr class="divider" />
+          <p class="alert-section-title yellow-dot">Reorder Recommendations</p>
+          <div id="reorder-alerts"></div>
+        </div>
+
+      </div>
+
+    </div><!-- end .content -->
+  </div><!-- end .main -->
+
+  <div class="overlay" id="overlay" onclick="closeDetail()"></div>
+
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <h3>Product Detail</h3>
+      <button class="close-btn" onclick="closeDetail()">&#10005;</button>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StockFlow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <aside class="sidebar">
+
+    <p class="sidebar-section">OVERVIEW</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        Dashboard
+      </a>
+
+      <a href="#" class="nav-item active" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zm0 0V5a2 2 0 00-2-2H6a2 2 0 00-2 2v2"/>
+        </svg>
+        Inventory
+      </a>
+
+    </nav>
+    <p class="sidebar-section">INVENTORY</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/>
+        </svg>
+        All Products
+        <span class="nav-badge">8</span>
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <polyline points="1 4 1 10 7 10"/>
+          <path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+        </svg>
+        Incoming Goods
+        <span class="nav-badge">3</span>
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        Outgoing Goods
+      </a>
+
+    </nav>
+    <p class="sidebar-section">MANAGE</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+        </svg>
+        Suppliers
+      </a>
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        Reports
+      </a>
+
+    </nav>
+
+    <p class="sidebar-section">SYSTEM</p>
+    <nav class="sidebar-nav">
+
+      <a href="#" class="nav-item" onclick="setNav(event,this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+        </svg>
+        Settings
+      </a>
+
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">AZ</div>
+      <div>
+        <p class="user-name">Ama Mensah</p>
+        <p class="user-role">Admin</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="main">
+
+    <div class="topbar">
+
+      <div class="topbar-logo">
+        <div class="logo-box">
+          <svg viewBox="0 0 24 24" fill="white" width="16" height="16">
+            <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zm0 12H4V9h16v10zM4 5h16V3H4v2z"/>
+          </svg>
+        </div>
+        <span class="logo-text">StockFlow</span>
+      </div>
+
+      <span class="breadcrumb">Previous page &rsaquo; <strong>Inventory</strong></span>
+
+      <div class="topbar-right">
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </button>
+
+        <div class="topbar-avatar">AZ</div>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Inventory</h1>
+          <p class="page-breadcrumb">Previous page &rsaquo; <span>Inventory</span></p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-outline">Stock Category</button>
+          <button class="btn btn-outline">Supplier Breakdown</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <p class="stat-label">Total Products</p>
+          <p class="stat-value blue">4,821</p>
+          <p class="stat-sub">+38 this week</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Total Stock Value</p>
+          <p class="stat-value green">128,948</p>
+          <p class="stat-sub">&#8358;128,948,000</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Low Stock Items</p>
+          <p class="stat-value orange">12</p>
+          <p class="stat-sub">Needs reorder</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Critical Items</p>
+          <p class="stat-value red">4</p>
+          <p class="stat-sub">Urgent attention</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+
+        <div class="filter-tabs">
+          <button class="tab active" onclick="filterByTab(this,'all')">All Stock <span class="tab-count">4821</span></button>
+          <button class="tab" onclick="filterByTab(this,'low')">Low Stock <span class="tab-count">44</span></button>
+          <button class="tab" onclick="filterByTab(this,'critical')">Critical <span class="tab-count">4</span></button>
+        </div>
+
+        <div class="toolbar-right">
+
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search by name, SKU, supplier…" />
+          </div>
+
+          <select class="select-filter" onchange="filterByZone(this.value)">
+            <option>All Zones</option>
+            <option>Zone A</option>
+            <option>Zone B</option>
+            <option>Zone C</option>
+          </select>
+
+          <select class="select-filter" onchange="filterByStatus(this.value)">
+            <option>All Status</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out of Stock</option>
+          </select>
+
+          <button class="btn btn-outline">Export CSV</button>
+          <button class="btn btn-outline">Export PDF</button>
+          <button class="btn btn-primary">+ Add Product</button>
+
+        </div>
+
+      </div>
+      <div class="table-panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Product Name</th>
+                <th>Supplier</th>
+                <th>Zone</th>
+                <th>Qty Available</th>
+                <th>Capacity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+             
+            </tbody>
+          </table>
+        </div>
+        <div class="table-footer">
+          <span id="showing-text">Showing 1–7 of 4,821 products</span>
+          <div class="pagination">
+            <button class="pg-btn active">1</button>
+            <button class="pg-btn">2</button>
+            <button class="pg-btn">3</button>
+            <button class="pg-btn">…</button>
+            <button class="pg-btn">410</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bottom-grid">
+
+        <div class="chart-panel">
+          <div class="panel-head">
+            <div>
+              <p class="panel-title">Stock by Category</p>
+              <p class="panel-sub">See distribution across product groups</p>
+            </div>
+            <button class="btn btn-outline">Details</button>
+          </div>
+          <div id="chart-rows"></div>
+        </div>
+
+        <div class="alerts-panel">
+          <p class="alert-section-title red-dot">Low Stock Alerts</p>
+          <div id="low-alerts"></div>
+          <hr class="divider" />
+          <p class="alert-section-title yellow-dot">Reorder Recommendations</p>
+          <div id="reorder-alerts"></div>
+        </div>
+
+      </div>
+
+    
+  <div class="overlay" id="overlay" onclick="closeDetail()"></div>
+
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <h3>Product Detail</h3>
+      <button class="close-btn" onclick="closeDetail()">&#10005;</button>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> -->
