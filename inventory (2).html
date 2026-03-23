@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="./inventory.css">
+</head>
+<body>
+    <!-- the header -->
+     <header class="nav-wrapper">
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="navlogo">
+                <img src="/icons/stockflow-logo.png" alt="">
+                <p>StockFlow</p>
+            </div>
+            <div class="nav-icons">
+                <img class="nav-icon" src="/icons/search-icon.png" alt="">
+                <img class="nav-icon" src="/icons/notification-icon.png" alt="">
+                <img class="nav-icon" src="/icons/Vector.png" alt="">
+                <div class="a-z">
+                    <img src="/icons/AZ.png" alt="">
+                </div>
+                
+            </div>
+        </nav>
+     </header>
+
+     <!-- the inventory -->
+      <section class="inventory-1">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <!-- overview -->
+            <div class="overview">
+                <p>OVERVIEW</p>
+                <ul class="overview-lists">
+                    <li class="overview-list1">
+                        <img src="/icons/dashboardicon.png" alt="">
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li class="overview-list2">
+                        <img src="/icons/inventory-icons.png" alt="">
+                        <a href="#">Inventory</a>
+                    </li>
+                    <li class="overview-list1">
+                        <img src="/icons/allproducticon.png" alt="">
+                        <a href="">All Products</a>
+                    </li>
+                    <li class="overview-list1">
+                        <img src="/icons/incoming-goods icon.png" alt="">
+                        <a href="">Incoming Goods</a>
+                    </li>
+                    <li class="overview-list1">
+                        <img src="/icons/outgoing.png" alt="">
+                        <a href="">Outgoing Goods</a>
+                    </li>
+                    <li class="overview-list1
+                    ">
+                        <img src="/icons/suppliers-icon.png" alt="">
+                        <a href="">Suppliers</a>
+                    </li>
+                     <li class="overview-list1">
+                        <img src="/icons/user.png" alt="">
+                        <a href="#">User</a>
+                    </li>
+                    <li class="overview-list1">
+                        <img src="/icons/reports.png" alt="">
+                        <a href="#">Reports</a>
+                    </li>
+                    
+                </ul>
+
+                
+            </div>
+            <div class="user-id">
+                    <div class="user-dp">
+                    <h3>AM</h3>
+                    </div>
+                    <div class="username">
+                        <h4>Ama Mensah</h4>
+                        <p>Warehouse Manager</p>
+                    </div>
+            </div>
+
+        </div>
+        <!-- inventory information -->
+
+        <div class="inventory-info">
+
+            <!-- inventory heading -->
+
+           <div class="inventory-heading">
+                 <div class="inventory-title">
+                   <h3>Inventory</h3>
+                   <span>
+                     <img src="/icons/previous.png" alt="" height="12px">
+                     <p>Previous page</p>
+                     <img src="/icons/next.png" alt="" height="15px" width="15px">
+                     <p>Inventory</p>
+                  </span>
+                 </div>
+
+                 <!-- inventory heading cards -->
+
+                 <div class="inventory-cards">
+                    <div class="sku">
+                        <div class="v-rule-sku"></div>
+                        <div class="data">
+                            <h4>4,821</h4>
+                            <p>Total SKUs</p>
+                        </div>
+                    </div>
+                    <div class="units">
+                         <div class="v-rule-units"></div>
+                        <div class="data">
+                            <h4>128,940</h4>
+                            <p>Total Units</p>
+                        </div>
+                    </div>
+                    <div class="stock">
+                         <div class="v-rule-stock"></div>
+                        <div class="data">
+                            <h4>12</h4>
+                            <p>Low Stock</p>
+                        </div>
+                    </div>
+                    <div class="critical">
+                         <div class="v-rule-critical"></div>
+                        <div class="data">
+                            <h4>4</h4>
+                            <p>Critical</p>
+                        </div>
+                    </div>
+                
+                 </div>
+           </div>
+           <!-- inventory btns -->
+           <div class="inventory-btn">
+
+               <!-- the fist btns -->
+               <div class="btn-wrapper1">
+                  <span>
+                    <a href="">All Stock</a>
+                    <p class="alert1">4,821</p>
+                  </span>
+
+                  <span>
+                    <a href="">Low Stock</a>
+                    <p class="alert2">12</p>
+                  </span>
+
+                 <span>
+                    <a href="">Critical</a>
+                    <p class="alert3">4</p>
+                 </span>
+               </div>
+
+             <!-- the second button -->
+                <div class="btn-wrapper2">
+            
+                    <a href="">Stock Category</a>
+                    <a href="">Supplies Breakdown</a>
+               </div>
+               
+            </div> 
+            <div class="search-and-btns-wrapper">
+
+              <div class="search-wrapper"> 
+                 <div class="search-bar">
+                    <input type="text" id="search" placeholder=" Search by name, SKU and supplier... ">
+                    
+                 </div >
+                 <div class="search-btns">
+                    <span class="zones">
+                        <img src="/icons/funnel.png" alt="">
+                        <a href="">All Zones</a>
+                    </span>
+                    <span class="status">
+                        <img src="/icons/status.png" alt="">
+                        <a href="">All Status</a>
+                    </span>
+                    <span class="suppliers">
+                        <img src="/icons/supplier.png" alt="">
+                        <a href="">All Suppliers</a>
+                    </span>
+                  </div>
+               </div>
+
+               <div class="task-btns">
+                <span class="export">
+                    <img src="/icons/cvs.png" alt="">
+                    <a href=""> Export CSV</a>
+                </span>
+
+                <span class="export">
+                    <img src="/icons/pdf.png" alt="">
+                    <a href="">Export PDF</a>
+                </span>
+
+                <span class="add-products">
+                    <img src="/icons/add-product.png" alt="">
+                    <a href="">Add Product</a>
+                </span>
+               </div>
+
+           </div>
+
+           <div>
+            <table  class="data-table">
+                <thead>
+                    <tr class="header">
+                        <th class="header">SKU</th>
+                        <th class="header">PRODUCT NAME</th>
+                        <th class="header">SUPPLIER</th>
+                        <th class="header">ZONE</th>
+                        <th class="header">QTY AVAILABLE</th>
+                        <th class="header">CAPACITY</th>
+                        <th class="header">STATUS</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- first row -->
+                    <tr class="row1">
+                    <a href="">
+                    <td>SF-101-A</td>
+                    <td id="product-name">Rice Bags(50kg, Jute Sack)</td>
+                    <td><span>Olam Nigeria</span></td>
+                    <td>
+                        <span>Zone A</span>
+                        
+                    </td>
+                    <td>3,000</td>
+                    <td>
+                        
+                        <span class="line">
+                            <div class="blue"></div>
+                        </span>
+                        <span>76%</span>
+                    
+                    </td>
+                    <td>
+                         <span class="in-stock">In Stock</span>
+                    </td> 
+                    </a>  
+                    </tr>
+
+                    <!-- second row -->
+
+                    <tr class="row2">
+                    <a href="">
+                    <td>SF-204-B</td>
+                    <td class="product-name">PVC Pipe Fittings 2"(Box)</td>
+                    <td><span>BUA Group</span></td>
+                    <td>
+                        <span>Zone B</span>
+                        
+                    </td>
+                    <td>280</td>
+                    <td>
+                        
+                        <span class="line">
+                            <div class="red1"></div>
+                        </span>
+                        <span>17%</span>
+                        
+                    </td>
+                    <td>
+                        <span class="low-stock">Low Stock</span>
+                    </td> 
+                    </a>  
+                    </tr>
+
+                    <!-- third row -->
+
+                    <tr class="row3">
+                    <td>SF-315-C</td>
+                    <td>Chest Freezer 200L(Units)</td>
+                    <td><Span>Hisense Nigeria</Span></td>
+                    <td>
+                        <span>Zone C</span>
+                        
+                    </td>
+                    <td>94</td>
+                    <td>
+                        
+                        <span class="line">
+                            <div class="blue2"></div>
+                        </span>
+                        <span>41%</span>
+                        
+                        
+                    </td>
+                    <td>
+                         <span class="in-stock">In Stock</span>
+                    </td> 
+                    
+                    </tr>
+
+                    <!-- fourth row -->
+
+                    <tr class="row4">
+                    <td>SF-422-D</td>
+                    <td>Generator 2.5KVA (Sumec Firman)</td>
+                    <td><span>Fouani Nigeria</span></td>
+                    <td>
+                        <span>Zone D</span>
+                        
+                    </td>
+                    <td>0</td>
+                    <td>
+                        <span class="line"></span>
+                        <span>0%</span>
+                        
+                    </td>
+                    <td>
+                         <span class="out-stock">Out of Stock</span>
+                    </td> 
+                   
+                    </tr>
+                     
+
+                    <!-- fifth row -->
+
+                    <tr class="row5">
+                    
+                    <td>SF-533-A</td>
+                    <td>Cement Bags 50kg (Dangote)</td>
+                    <td><span>Dangote Ind</span></td>
+                    <td>
+                        <span>  Zone A</span>
+                      
+                    </td>
+                    <td>5,200</td>
+                    <td>
+                        
+                        <span class="line">
+                            <div class="blue3"></div>
+                        </span>
+                        <span>91%</span>
+                        
+                    </td>
+                    <td>
+                         <span class="in-stock">In Stock</span>
+                    </td> 
+                     
+                    </tr>
+
+                    <!-- sixth row -->
+
+                    <tr class="row6">
+                    
+                    <td>SF-618-E</td>
+                    <td>Laptop HP Probook 450 G9</td>
+                    <td><span>Slot Systems</span></td>
+                    <td>
+                        <span>Zone E</span>
+                        
+                    </td>
+                    <td>62</td>
+                    <td>
+                        
+                        <span class="line">
+                            <div class="yelow"></div>
+                       </span>
+                       <span>31%</span> 
+                    
+                        
+                    </td>
+                    <td>
+                        <span class="in-stock">In Stock</span>
+                        
+                    </td> 
+                
+                    </tr>
+
+                   <!-- seventh row -->
+
+                    <tr class="row7">
+                        
+                    <td>SF-729-B</td>
+                    <td>GI Flanged Coupling 4"(pcs)</td>
+                    <td><span>Orca Steel</span></td>
+                    <td>
+                        <span> Zone B</span>
+                       
+                    </td>
+                    <td>75</td>
+                    <td>
+                        <span class="line">
+                            <div class="red2"></div>
+                        </span>
+                        <span>13%</span>
+                        
+                    </td>
+                    <td>
+                         <span class="low-stock">Low Stock</span>
+                    </td> 
+                    
+                    </tr>
+            
+
+                </tbody>
+
+            </table>
+
+           </div>
+           <!-- table pagination -->
+            <div class="pagination">
+                <p>Showing 1-12 of 4,821 products</p>
+                <div class="pagination-btn">
+                    <img src="/icons/previous.png" alt="">
+                    <button class="btn-1">1</button>
+                      <button>2</button>
+                        <button>3</button>
+                          <span>...</span>
+                          <button>12</button>
+                </div>
+            </div>
+
+        </div>
+      </section>
+      <script src="/codes/inventory.js"></script>
+</body>
+</html>
