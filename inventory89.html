@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockFlow Inventory</title>
+    <link rel="stylesheet" href="inventory7.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><span>StockFlow</span></div>
+      <div class="icons">
+        <i class="bx bx-search"></i>
+        <i class="bx bx-bell"></i>
+        <i class="bx bx-grid-alt"></i>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><i class="bx bx-grid-alt"></i> Dashboard</li>
+            <li class="active"><i class="bx bx-package"></i> Inventory</li>
+            <li><i class="bx bx-cart"></i> All Products</li>
+            <li><i class="bx bx-inbox"></i> Incoming Goods</li>
+            <li><i class="bx bx-truck"></i> Outgoing Goods</li>
+            <li><i class="bx bx-user"></i> Suppliers</li>
+            <li><i class="bx bx-bar-chart"></i> Reports</li>
+            <li><i class="bx bx-cog"></i> Settings</li>
+          </ul>
+        </nav>
+        <div class="user">
+          <strong>Ana Mensah</strong>
+          <small>Warehouse Manager</small>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="content">
+        <div id="content">
+          <div class="invent">
+            <p>Inventory</p>
+            <button class="previous">← previous page</button>
+          </div>
+          <section class="stats">
+            <div class="bar">
+              <div class="bar2"></div>
+
+              <div class="stat-card">
+                <h3>4,821</h3>
+                <p>Total SKUs</p>
+              </div>
+            </div>
+
+            <div class="bar">
+              <div class="bar3"></div>
+
+              <div class="stat-card">
+                <h3>128,940</h3>
+                <p>Total Units</p>
+              </div>
+            </div>
+
+            <div class="bar">
+              <div class="bar4"></div>
+
+              <div class="stat-card">
+                <h3>12</h3>
+                <p>Low Stock</p>
+              </div>
+            </div>
+
+            <div class="bar">
+              <div class="bar5"></div>
+
+              <div class="stat-card">
+                <h3>4</h3>
+                <p>Critical</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr />
+        <section class="allStock">
+          <div class="stockBtn">
+            <button class="allbtn">All stock <span>4210</span></button>
+            <button class="lowbtn">Low stock <span>12</span></button>
+            <button class="criticalbtn">Critical <span>4</span></button>
+          </div>
+
+          <div class="stockCat">
+            <button class="stockCatBtn">Stock Category</button>
+            <button class="stockCatBtn">Supply Breakdown</button>
+          </div>
+        </section>
+        <section class="toolbar">
+          <!-- Search -->
+          <div class="search-box">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search by name, SKU, supplier..." />
+          </div>
+
+          <!-- Filters -->
+          <div class="filters">
+            <button class="filter-btn">
+              <i class="bx bx-map"></i> All Zones
+            </button>
+
+            <button class="filter-btn">
+              <i class="bx bx-check-circle"></i> All Status
+            </button>
+
+            <button class="filter-btn">
+              <i class="bx bx-user"></i> All Suppliers
+            </button>
+          </div>
+
+          <!-- Actions -->
+          <div class="actions">
+            <button class="export">
+              <i class="bx bx-download"></i> Export CSV
+            </button>
+
+            <button class="export">
+              <i class="bx bx-file"></i> Export PDF
+            </button>
+
+            <button class="add-product">
+              <i class="bx bx-plus"></i> Add Product
+            </button>
+          </div>
+        </section>
+
+        <section class="inventory-layout">
+          <section class="inventory-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>SKU</th>
+                  <th>PRODUCT NAME</th>
+                  <th>SUPPLIER</th>
+                  <th>ZONE</th>
+                  <th>QTY AVAILABLE</th>
+                  <th>CAPACITY</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="sku">SF-101-A</td>
+                  <td>Rice Bags (50kg, Jute Sack)</td>
+                  <td><span class="supplier">Olam Nigeria</span></td>
+                  <td><span class="zone">Zone A</span></td>
+                  <td>3,800</td>
+
+                  <td>
+                    <div class="capacity">
+                      <div class="bar blue" style="width: 76%"></div>
+                      <span>76%</span>
+                    </div>
+                  </td>
+
+                  <td><span class="status green">In Stock</span></td>
+                </tr>
+
+                <tr>
+                  <td class="sku">SF-204-B</td>
+                  <td>PVC Pipe Fittings 2" (Box)</td>
+                  <td><span class="supplier">Bua Group</span></td>
+                  <td><span class="zone">Zone B</span></td>
+                  <td>280</td>
+
+                  <td>
+                    <div class="capacity">
+                      <div class="bar red" style="width: 17%"></div>
+                      <span>17%</span>
+                    </div>
+                  </td>
+
+                  <td><span class="status orange">Low Stock</span></td>
+                </tr>
+
+                <tr>
+                  <td class="sku">SF-315-C</td>
+                  <td>Chest Freezer 200L (Units)</td>
+                  <td><span class="supplier">Hisense Nigeria</span></td>
+                  <td><span class="zone">Zone C</span></td>
+                  <td>94</td>
+
+                  <td>
+                    <div class="capacity">
+                      <div class="bar blue" style="width: 47%"></div>
+                      <span>47%</span>
+                    </div>
+                  </td>
+
+                  <td><span class="status green">In Stock</span></td>
+                </tr>
+
+                <tr>
+                  <td class="sku">SF-422-D</td>
+                  <td>Generator 2.5KVA (Sumec Firman)</td>
+                  <td><span class="supplier">Fouani Nigeria</span></td>
+                  <td><span class="zone">Zone D</span></td>
+                  <td class="red-text">0</td>
+
+                  <td>
+                    <div class="capacity">
+                      <div class="bar gray" style="width: 0%"></div>
+                      <span>0%</span>
+                    </div>
+                  </td>
+
+                  <td><span class="status red">Out of Stock</span></td>
+                </tr>
+
+                <tr>
+                  <td class="sku">SF-533-A</td>
+                  <td>Cement Bags 50kg (Dangote)</td>
+                  <td><span class="supplier">Dangote Ind.</span></td>
+                  <td><span class="zone">Zone A</span></td>
+                  <td>5,200</td>
+
+                  <td>
+                    <div class="capacity">
+                      <div class="bar blue" style="width: 91%"></div>
+                      <span>91%</span>
+                    </div>
+                  </td>
+
+                  <td><span class="status green">In Stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <footer class="table-footer">
+              <p>Showing 1-12 of 4,821 products</p>
+
+              <div class="pagination">
+                <button class="btnn"><</button>
+                <button class="active">1</button>
+                <button class="btnn">2</button>
+                <button class="btnn">3</button>
+                <span>...</span>
+                <button class="btnn">402</button>
+                <button class="btnn">></button>
+              </div>
+            </footer>
+          </section>
+
+          <!-- Right Panel -->
+<div class="dashboard-container">
+    <!-- Header Section -->
+    <div class="header alert-critical">
+        <div class="header-left">
+            <span class="icon">⚠️</span>
+            <div>
+                <h2>Low Stock Alerts</h2>
+                <p>Critical & warning items</p>
+            </div>
+        </div>
+        <span class="badge">12</span>
+    </div>
+
+    <!-- Alert Items List -->
+    <div class="items-list">
+        <div class="item-card critical">
+            <div class="item-info">
+                <h3>Generator 2.5KVA</h3>
+                <code>SF-422-D • D-09</code>
+            </div>
+            <div class="item-status">
+                <span class="current-stock">0</span>
+                <span class="reorder-info">Reorder: 50 units</span>
+            </div>
+        </div>
+        <div class="item-card critical">
+            <div class="item-info">
+                <h3>GI Flanged Coupling 4</h3>
+                <code>SF-729-B • B-12</code>
+            </div>
+            <div class="item-status">
+                <span class="current-stock">75</span>
+                <span class="reorder-info">Reorder: 500 pcs</span>
+            </div>
+        </div>
+        <div class="item-card critical">
+            <div class="item-info">
+                <h3>PVS Pipe Fittings 2</h3>
+                <code>SF-204-B • B-05</code>
+            </div>
+            <div class="item-status">
+                <span class="current-stock">280</span>
+                <span class="reorder-info">Reorder: 50 units</span>
+            </div>
+        </div>
+
+        <div class="item-card warning">
+            <div class="item-info">
+                <h3>HP ProBook 450 G9</h3>
+                <code>SF-618-E • E-03</code>
+            </div>
+
+
+            
+            <div class="item-status">
+                <span class="current-stock">62</span>
+                <span class="reorder-info">Reorder: 100 units</span>
+            </div>
+        </div>
+
+        
+
+        <div class="item-card warning">
+            <div class="item-info">
+                <h3>Chest Freezer 200l</h3>
+                <code>SF-315-C • C-02</code>
+            </div>
+
+
+            
+            <div class="item-status">
+                <span class="current-stock">62</span>
+                <span class="reorder-info">Reorder: 100 units</span>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+
+    <!-- Reorder Recommendations Section -->
+    <aside class="reorder-section">
+        <div class="reorder-header">
+            <span class="icon">🔄</span>
+            <h2>Reorder Recommendations</h2>
+        </div>
+
+        <div class="reorder-card">
+            <div class="reorder-left">
+                <span class="delivery-icon">🚚</span>
+                <div>
+                    <h3>Generator 2.5KVA</h3>
+                    <p>Fouani Nigeria - Lekki</p>
+                </div>
+            </div>
+            <div class="reorder-right">
+                <span class="quantity">50 units</span>
+                <span class="price">≈ ₦8.5M</span>
+            </div>
+        </div>
+
+        <div class="reorder-card">
+            <div class="reorder-left">
+                <span class="delivery-icon">🚚</span>
+                <div>
+                    <h3>GI Flanged Coupling</h3>
+                    <p>Orca Steel. Oshodi</p>
+                </div>
+            </div>
+            <div class="reorder-right">
+                <span class="quantity">500 units</span>
+                <span class="price">≈ ₦1.5M</span>
+            </div>
+        </div>
+
+        <div class="reorder-card">
+            <div class="reorder-left">
+                <span class="delivery-icon">🚚</span>
+                <div>
+                    <h3>PVC Pipe Fittings 2</h3>
+                    <p>BUA Group. Sagamu</p>
+                </div>
+            </div>
+            <div class="reorder-right">
+                <span class="quantity">1000 units</span>
+                <span class="price">≈ ₦960k</span>
+            </div>
+        </div>
+    </aside>
+</div>
+          </aside>
+
+<div class="card">
+  <div class="card-header">
+    <div>
+      <h2>Supplier Breakdown</h2>
+      <p>Active suppliers & order volumes</p>
+    </div>
+    <button class="view-btn">View All</button>
+  </div>
+
+  <div class="table">
+    <div class="table-head">
+      <span>SUPPLIER</span>
+      <span>SKUS</span>
+      <span>TOTAL UNITS</span>
+      <span>FILL RATE</span>
+      <span>STATUS</span>
+    </div>
+
+    <!-- ROW -->
+    <div class="row">
+      <div class="supplier">
+        <strong>Olam Nigeria</strong>
+        <p>Apapa, Lagos</p>
+      </div>
+      <span class="blue">3</span>
+      <div class="units">
+        8,400
+        <div class="bar"><div class="fill blue-fill w-90"></div></div>
+      </div>
+      <span class="green">98%</span>
+      <span class="badge active">● Active</span>
+    </div>
+
+    <div class="row">
+      <div class="supplier">
+        <strong>Dangote Ind.</strong>
+        <p>Ibadan</p>
+      </div>
+      <span class="blue">2</span>
+      <div class="units">
+        5,740
+        <div class="bar"><div class="fill blue-fill w-70"></div></div>
+      </div>
+      <span class="green">95%</span>
+      <span class="badge active">● Active</span>
+    </div>
+
+    <div class="row">
+      <div class="supplier">
+        <strong>Bua Group</strong>
+        <p>Sagamu</p>
+      </div>
+      <span class="blue">2</span>
+      <div class="units">
+        1,100
+        <div class="bar"><div class="fill orange-fill w-40"></div></div>
+      </div>
+      <span class="orange">81%</span>
+      <span class="badge delayed">● Delayed</span>
+    </div>
+
+    <div class="row">
+      <div class="supplier">
+        <strong>Notore Chemical</strong>
+        <p>Enugu</p>
+      </div>
+      <span class="blue">1</span>
+      <div class="units">
+        2,400
+        <div class="bar"><div class="fill blue-fill w-60"></div></div>
+      </div>
+      <span class="green">93%</span>
+      <span class="badge active">● Active</span>
+    </div>
+
+    <div class="row">
+      <div class="supplier">
+        <strong>Fouani Nigeria</strong>
+        <p>Lekki, Lagos</p>
+      </div>
+      <span class="blue">2</span>
+      <div class="units">
+        38
+        <div class="bar"><div class="fill red-fill w-10"></div></div>
+      </div>
+      <span class="red">42%</span>
+      <span class="badge critical">● Critical</span>
+    </div>
+
+    <div class="row">
+      <div class="supplier">
+        <strong>Slot Systems</strong>
+        <p>Ikeja, Lagos</p>
+      </div>
+      <span class="blue">2</span>
+      <div class="units">
+        190
+        <div class="bar"><div class="fill blue-fill w-30"></div></div>
+      </div>
+      <span class="green">88%</span>
+      <span class="badge active">● Active</span>
+    </div>
+
+  </div>
+</div>
+
+        </section>
+      </main>
+      
+    </div>
+
+    <div class="card stock-card">
+  <div class="card-header">
+    <div>
+      <h2>Stock by Category</h2>
+      <p>Unit distribution across product groups</p>
+    </div>
+  </div>
+
+  <div class="category-list">
+
+    <div class="cat-row">
+      <span>Construction Materials</span>
+      <div class="progress">
+        <div class="fill fill-blue w-95"></div>
+      </div>
+      <span class="value">6,300</span>
+    </div>
+
+    <div class="cat-row">
+      <span>Agricultural Goods</span>
+      <div class="progress">
+        <div class="fill fill-blue w-90"></div>
+      </div>
+      <span class="value">6,200</span>
+    </div>
+
+    <div class="cat-row">
+      <span>Energy & Utilities</span>
+      <div class="progress">
+        <div class="fill fill-teal w-75"></div>
+      </div>
+      <span class="value">4,340</span>
+    </div>
+
+    <div class="cat-row">
+      <span>Industrial Hardware</span>
+      <div class="progress">
+        <div class="fill fill-orange w-55"></div>
+      </div>
+      <span class="value">3,215</span>
+    </div>
+
+    <div class="cat-row">
+      <span>Power Equipment</span>
+      <div class="progress">
+        <div class="fill fill-red w-35"></div>
+      </div>
+      <span class="value">1,938</span>
+    </div>
+
+    <div class="cat-row">
+      <span>Electronics & Appliances</span>
+      <div class="progress">
+        <div class="fill fill-green w-25"></div>
+      </div>
+      <span class="value">1,156</span>
+    </div>
+
+    <div class="cat-row">
+      <span>IT Equipment</span>
+      <div class="progress">
+        <div class="fill fill-purple w-15"></div>
+      </div>
+      <span class="value">792</span>
+    </div>
+
+  </div>
+</div>
+<script src="script7.js"></script>
+  </body>
+</html>
