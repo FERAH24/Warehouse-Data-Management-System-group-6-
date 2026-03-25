@@ -75,6 +75,10 @@ vertical-align: middle;
     color: #2A2723;
 }
 
+.nav-link a:hover{
+    color: #3162e8;
+}
+
 .nav-btn{
     display: flex;
     align-items: center;
@@ -86,6 +90,10 @@ vertical-align: middle;
 .nav-btn a{
     text-decoration: none;
 
+}
+
+.nav-btn a:hover{
+    color: #3162e8;
 }
 
 .nav-btn1{
@@ -111,6 +119,13 @@ vertical-align: middle;
     border-radius: 9px;
     color: white;
     font-size: 14px;
+}
+
+.nav-btn3:hover{
+    color:#3162e8;
+    border: 1px solid #3162e8;
+    background-color: white;
+    box-shadow: 1px 1px 4px#3162e8;
 }
 
 
