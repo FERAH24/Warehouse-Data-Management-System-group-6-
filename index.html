@@ -1,422 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StockFlow – Inventory</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <link rel="stylesheet" href="./style (2).css">
+    <title>Stockflow</title>
 </head>
 <body>
-
-<div class="app-frame">
-
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="topbar-left">
-      <div class="logo-box">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      </div>
-      <span class="brand">StockFlow</span>
-    </div>
-    <div class="topbar-right">
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </div>
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-      </div>
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      </div>
-      <div class="avatar">AZ</div>
-    </div>
-  </div>
-
-  <div class="body-wrap">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-content">
-
-        <div class="nav-group">
-          <div class="nav-label">Overview</div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            <span>Dashboard</span>
-          </div>
-          <div class="nav-item active">
-            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            <span>Inventory</span>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <div class="nav-label">Inventory</div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-            <span>All Products</span>
-            <span class="nav-badge">3</span>
-          </div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
-            <span>Incoming Goods</span>
-          </div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            <span>Outgoing Goods</span>
-            <span class="nav-badge">7</span>
-          </div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>Suppliers</span>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <div class="nav-label">Reports</div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            <span>Reports</span>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <div class="nav-label">System</div>
-          <div class="nav-item">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            <span>Settings</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="sidebar-footer">
-        <div class="user-av">AM</div>
-        <div class="user-info">
-          <strong>Ama Mensah</strong>
-          <span>Warehouse Manager</span>
-        </div>
-      </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-
-      <!-- PAGE HEADER -->
-      <div class="page-header">
-        <div class="page-title-block">
-          <h1>Inventory</h1>
-          <div class="breadcrumb">
-            &#8592; Previous page &nbsp;&#8250;&nbsp; <span>Inventory</span>
-          </div>
-        </div>
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-bar stat-bar-blue"></div>
-            <div class="stat-body">
-              <div class="stat-num">4,821</div>
-              <div class="stat-label">Total Items</div>
+    <header>
+        <nav>
+             <div class="navlogo">
+                <img src="/icons/stockflow-logo.png" alt="">
+                <p>StockFlow</p>
             </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-bar stat-bar-green"></div>
-            <div class="stat-body">
-              <div class="stat-num">128,940</div>
-              <div class="stat-label">Total Units</div>
+            <div class="nav-items">
+
+            <div class="nav-link">
+                <a href="#home" class="active">Home</a>
+                <a href="#feature">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="">Docs</a>
+                <a href="">Blog</a>
             </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-bar stat-bar-red"></div>
-            <div class="stat-body">
-              <div class="stat-num">12</div>
-              <div class="stat-label">Low Stock</div>
+
+            <div class="nav-btn">
+                <a href="" class="nav-btn1">Sign in</a>
+                <a href="" class="nav-btn2">Book a Demo</a>
+                <a href="/comtact.html" class="nav-btn3">Contact Us</a>
             </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-bar stat-bar-orange"></div>
-            <div class="stat-body">
-              <div class="stat-num">4</div>
-              <div class="stat-label">Critical</div>
+
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- TABS ROW -->
-      <div class="tabs-row">
-        <div class="tabs">
-          <button class="tab active">All Stock <span class="tab-count">4,821</span></button>
-          <button class="tab">Low Stock <span class="tab-count">12</span></button>
-          <button class="tab">Critical <span class="tab-count">4</span></button>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+<!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1>The <span>Smarter</span> Way To <br> Run Your Warehouse</h1>
+            <p>Stockflow gives your team real-time inventory visibility, automated <br> alerts, and powerful analytics</p>
+            <div class="home-btns">
+                <button class="btn1">
+                    <a class="CTA" href="">Start for Free</a>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </button>
+                <button class="btn2">
+                     <a class='Demo' href="">Watch Demo</a>
+                    <i class="ph-bold ph-play-circle"></i>
+                </button>  
+            </div>
         </div>
-        <div class="tab-actions">
-          <button class="btn-stock-cat">Stock Category</button>
-          <button class="btn-supplies">Supplies Breakdown</button>
+
+        <div class="analytics-img">
+         <img src="/icons/inventory.png" alt="" class="responsive" width="1000px">
         </div>
-      </div>
+    </section>
 
-      <!-- FILTERS ROW -->
-      <div class="filters-row">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Search by name, SKU, supplier...</span>
+
+    <section id="feature">
+        <div class="feature-header">
+            <span class="span1">
+                <hr>
+                <p>PLATFORM FEATURES</p>
+                <hr>
+            </span>
+
+            <span class="span2">
+                <p>TRUSTED BY WAREHOUSE TEAMS ACROSS NIGERIA</p>
+            </span>
+
+            <ul class="feature-lists">
+                <li>Dangote Group</li>
+                <li>Olam Nigeria</li>
+                <li>Bua Group</li>
+                <li>Notore Chemicals</li>
+                <li>Hisense Nigeria</li>
+                <li>Orca Steel</li>
+            </ul>
         </div>
-        <button class="filter-btn">
-          <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-          All Zones
-        </button>
-        <button class="filter-btn">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-          All Status
-        </button>
-        <button class="filter-btn">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-          All Suppliers
-        </button>
-        <div class="filter-actions">
-          <button class="btn-export">
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Export CSV
-          </button>
-          <button class="btn-export">
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Export PDF
-          </button>
-          <button class="btn-add">+ Add Product</button>
+
+
+        <div class="feature-content">
+            <div class="feature-intro">
+                <h2>Everything your warehouse needs</h2>
+                <p>From receiving to dispatch - Stockflow handles every step of your <br>warehouse operation</p>
+            </div>
+
+            <div class="feature-cards">
+                <div class="card">
+                    <span class="span1">
+                        <img src="/icons/impor.png" alt="">
+                    </span>
+                    <div class="info">
+                    <h4>Import Your Inventory</h4>
+                    <p>upload products manually or import them from your spreedsheet in seconds</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span>
+                        <img src="/icons/alert (2).png" alt="">
+                    </span>
+                    <div class="info">
+                    <h4>Low stock Alerts</h4>
+                    <p>Get notified the moment stock drops below threshold. AI powered reorder recommendations saves hours daily</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span><img src="/icons/analytics.png" alt=""></span>
+                    <div class="info">
+                    <h4>Advanced Analytics</h4>
+                    <p>Deep insight into stock movement, supplier performance and zone utilization with exportable reports</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span>
+                        <img src="/icons/team.png" alt="">
+                    </span>
+                    <div class="info">
+                    <h4>Team Management</h4>
+                    <p>Role-based access for managers, staff, and supervisors. Every action looged with a full audit trail.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span>
+                        <img src="/icons/export.png" alt="">
+                    </span>
+                    <div class="info">
+                    <h4>Exporting & Reporting</h4>
+                    <p>One -click CSV and PDF exports. Schedule reports deliverd straight to your inbox automatically</p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- INVENTORY TABLE -->
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>SKU</th>
-              <th>Product Name</th>
-              <th>Supplier</th>
-              <th>Zone</th>
-              <th>Qty Available</th>
-              <th>Capacity</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="sku">SF-101-A</td>
-              <td class="product-name">Rice Bags (50kg, Jute Sack)</td>
-              <td class="sup-cell">Olam Nigeria</td>
-              <td><span class="zone-tag zone-a"><span class="dot"></span>Zone A</span></td>
-              <td>5,380</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-blue" style="width:76%"></div></div>
-                  <span class="cap-pct">76%</span>
-                </div>
-              </td>
-              <td><span class="badge in-stock"><span class="dot"></span>In Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-204-B</td>
-              <td class="product-name">PVC Pipe Fittings 2" (Box)</td>
-              <td class="sup-cell">Bua Group</td>
-              <td><span class="zone-tag zone-b"><span class="dot"></span>Zone B</span></td>
-              <td>280</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-red" style="width:17%"></div></div>
-                  <span class="cap-pct">17%</span>
-                </div>
-              </td>
-              <td><span class="badge low-stock"><span class="dot"></span>Low Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-315-C</td>
-              <td class="product-name">Chest Freezer 200L (Units)</td>
-              <td class="sup-cell">Hisense Nigeria</td>
-              <td><span class="zone-tag zone-c"><span class="dot"></span>Zone C</span></td>
-              <td>94</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-blue" style="width:47%"></div></div>
-                  <span class="cap-pct">47%</span>
-                </div>
-              </td>
-              <td><span class="badge in-stock"><span class="dot"></span>In Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-422-D</td>
-              <td class="product-name">Generator 2.5KVA (Sumec Firman)</td>
-              <td class="sup-cell">Fouani Nigeria</td>
-              <td><span class="zone-tag zone-d"><span class="dot"></span>Zone D</span></td>
-              <td class="qty-zero">0</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
-                  <span class="cap-pct">0%</span>
-                </div>
-              </td>
-              <td><span class="badge out-stock"><span class="dot"></span>Out of Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-533-A</td>
-              <td class="product-name">Cement Bags 50kg (Dangote)</td>
-              <td class="sup-cell">Dangote Ind.</td>
-              <td><span class="zone-tag zone-a"><span class="dot"></span>Zone A</span></td>
-              <td>5,260</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-blue" style="width:41%"></div></div>
-                  <span class="cap-pct">41%</span>
-                </div>
-              </td>
-              <td><span class="badge in-stock"><span class="dot"></span>In Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-618-E</td>
-              <td class="product-name">Laptop HP ProBook 450 G9</td>
-              <td class="sup-cell">Slot Systems</td>
-              <td><span class="zone-tag zone-e"><span class="dot"></span>Zone E</span></td>
-              <td>62</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-yellow" style="width:31%"></div></div>
-                  <span class="cap-pct">31%</span>
-                </div>
-              </td>
-              <td><span class="badge in-stock"><span class="dot"></span>In Stock</span></td>
-            </tr>
-            <tr>
-              <td class="sku">SF-729-B</td>
-              <td class="product-name">GI Flanged Coupling 4" (Pcs)</td>
-              <td class="sup-cell">Orca Steel</td>
-              <td><span class="zone-tag zone-b"><span class="dot"></span>Zone B</span></td>
-              <td>75</td>
-              <td>
-                <div class="cap-wrap">
-                  <div class="progress-bar"><div class="progress-fill fill-red" style="width:13%"></div></div>
-                  <span class="cap-pct">13%</span>
-                </div>
-              </td>
-              <td><span class="badge low-stock"><span class="dot"></span>Low Stock</span></td>
-            </tr>
-          </tbody>
-        </table>
+    <section id="how-it-works">
+        <div class="how-it-works-title">
+              <span>
+                <hr>
+                <p>HOW IT WORKS</p>
+                <hr>
+              </span>
 
-        <div class="pagination">
-          <span>Showing 1–12 of 4,821 products</span>
-          <div class="pages">
-            <button class="page-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-            <button class="page-btn active">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <span class="page-dots">...</span>
-            <button class="page-btn">402</button>
-            <button class="page-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
-          </div>
+            <div class="how-it-works-intro">
+                <h2>Up and running in minutes</h2>
+                <p>No complex setup. No long onboarding get your warehouse didgital <br> today </p>
+            </div>
+
+
         </div>
-      </div>
-
-      <!-- SUPPLIER BREAKDOWN -->
-      <div class="section-card">
-        <div class="section-header">
-          <div>
-            <div class="section-title">Supplier Breakdown</div>
-            <div class="section-sub">Active suppliers &amp; order volumes</div>
-          </div>
-          <button class="view-all-btn">View All</button>
+        <div class="how-it-works-cards">
+            <div class="card2">
+                    <div class="num">01</div>
+                    <div class="info">
+                    <h4>Create Account</h4>
+                    <p>Sign up free and configure your warehouse zones and product categories</p>
+                    </div>
+            </div>
+            <div class="card2">
+                    <span>
+                        02
+                    </span>
+                    <div class="info">
+                    <h4>Import Products</h4>
+                    <p>Upload your existing inventory via CSV or add products manually with our guided form</p>
+                    </div>
+            </div>
+            <div class="card22">
+                   <span>
+                        03
+                    </span>
+                    <div class="info">
+                    <h4>Invite Your Team</h4>
+                    <p>Add warehouse staff with the right roles and permission  in seconds</p>
+                    </div>
+            </div>
+            <div class="card22">
+                    <span>
+                    04
+                    </span>
+                    <div class="info">
+                    <h4>Manage Your Supplies</h4>
+                    <p>Stop managing your supplies with ease</p>
+                    </div>
+            </div>  
         </div>
-        <table class="sup-table">
-          <thead>
-            <tr>
-              <th>Supplier</th>
-              <th>SKUs</th>
-              <th>Total Units</th>
-              <th>Fill Rate</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><div class="sup-name">Olam Nigeria</div><div class="sup-sub">Apapa, Lagos</div></td>
-              <td>3</td>
-              <td>
-                <div class="fill-row">
-                  <span>8,400</span>
-                  <div class="fill-bar"><div class="fill-fill" style="width:100%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct green-text">98%</span></td>
-              <td><span class="badge in-stock"><span class="dot"></span>Active</span></td>
-            </tr>
-            <tr>
-              <td><div class="sup-name">Dangote Ind.</div><div class="sup-sub">Ibadan</div></td>
-              <td>2</td>
-              <td>
-                <div class="fill-row">
-                  <span>5,740</span>
-                  <div class="fill-bar"><div class="fill-fill" style="width:68%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct green-text">95%</span></td>
-              <td><span class="badge in-stock"><span class="dot"></span>Active</span></td>
-            </tr>
-            <tr>
-              <td><div class="sup-name">Bus Group</div><div class="sup-sub">Sagamu</div></td>
-              <td>2</td>
-              <td>
-                <div class="fill-row">
-                  <span>1,160</span>
-                  <div class="fill-bar"><div class="fill-fill fill-yellow-bar" style="width:14%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct yellow-text">61%</span></td>
-              <td><span class="badge low-stock"><span class="dot"></span>Delayed</span></td>
-            </tr>
-            <tr>
-              <td><div class="sup-name">Notore Chemical</div><div class="sup-sub">Enugu</div></td>
-              <td>1</td>
-              <td>
-                <div class="fill-row">
-                  <span>2,460</span>
-                  <div class="fill-bar"><div class="fill-fill" style="width:29%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct green-text">93%</span></td>
-              <td><span class="badge in-stock"><span class="dot"></span>Active</span></td>
-            </tr>
-            <tr>
-              <td><div class="sup-name">Fouani Nigeria</div><div class="sup-sub">Lekki, Lagos</div></td>
-              <td>2</td>
-              <td>
-                <div class="fill-row">
-                  <span>38</span>
-                  <div class="fill-bar"><div class="fill-fill fill-red-bar" style="width:1%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct red-text">42%</span></td>
-              <td><span class="badge out-stock"><span class="dot"></span>Critical</span></td>
-            </tr>
-            <tr>
-              <td><div class="sup-name">Slot Systems</div><div class="sup-sub">Ikeja, Lagos</div></td>
-              <td>2</td>
-              <td>
-                <div class="fill-row">
-                  <span>190</span>
-                  <div class="fill-bar"><div class="fill-fill" style="width:2%"></div></div>
-                </div>
-              </td>
-              <td><span class="fill-pct green-text">88%</span></td>
-              <td><span class="badge in-stock"><span class="dot"></span>Active</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </section>
 
-    </main>
-  </div>
-</div>
+    <section id="customer-stories">
+        <div>
+            <div class="customer-stories-title">
+              <span>
+                <hr>
+                <p>CUSTOMER STORIES</p>
+                <hr>
+              </span>
 
-<script src="app.js"></script>
+             <div class="customer-stories-intro">
+                <h2>Trusted by warehouse teams</h2>
+                <p>Real feedback from real operations managers </p>
+            </div>
+        </div>
+
+        <div class="customer-stories-cards">
+            <div class="card3">
+                <span>
+                    <img src="/icons/stars.png" alt="">
+                </span>
+                <p><em>"StockFlow transformed how we manage our Lagos warehouse. Low stock alerts alone saved us from  two critical shortages last month"</em></p>
+                <div class="customer">
+                    <span class="span1">AM</span>
+                    <div>
+                        <h4>Ama Mensah</h4>
+                        <p>Warehouse Manager, Olam Nigeria</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card3">
+                <span>
+                    <img src="/icons/stars.png" alt="">
+                </span>
+                <p><em>"The shipment tracking map gives us visibility across Ibadan, Sagamu and Enugu simultaneously. Our team operates so much faster now"</em></p>
+                <div class="customer">
+                    <span class="span2">KA</span>
+                    <div>
+                        <h4>Kofi Asante</h4>
+                        <p>Logistic Director Industries</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card3">
+                <span>
+                    <img src="/icons/stars.png" alt="">
+                </span>
+                <p><em>"Onboarding took lss than a day. The export reports make our monthly audt completely straightforward. Highly recommended"</em></p>
+                <div class="customer">
+                    <span class="span3">EM</span>
+                    <div>
+                        <h4>Emeka Appiah</h4>
+                        <p >Operational Manager, Bua Group</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <section id="pricing" >
+         <div>
+            <div class="pricing-title">
+              <span>
+                <hr>
+                <p>PRICING</p>
+                <hr>
+              </span>
+
+             <div class="pricing-intro">
+                <h2>Simple, transparent pricing</h2>
+                <p>Start free. Scale as you grow. No hidden fees </p>
+            </div>
+        </div>
+
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="pricing-plan">
+                    <span>STARTER</span>
+                    <p class="fee">FREE</p>
+                    <p class="package">Forever-up to 3 users</p>
+                </div>
+                
+
+                <div class="pricing-list">
+                    <ul>
+                        <li><i class="ph ph-check"></i> Up to 500 SKUs</li>
+                        <li><i class="ph ph-check"></i>
+                        1 warehouse zone</li>
+                        <li><i class="ph ph-check"></i>
+                        Basic stock alerts</li>
+                        <li><i class="ph ph-check"></i>
+                        CSV export</li>
+                    </ul>
+
+                    <button>
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <div class="pricing-card2">
+
+                 <div class="pricing-plan2">
+                    <span>PROFESSIONAL</span>
+                    <p class="fee2">
+                        <i class="ph ph-currency-ngn"></i>
+                        45K
+                    </p>
+                    <p class="package">per month up to 20 users</p>
+                </div>
+                
+
+                <div class="pricing-list2">
+                    <ul>
+                        <li><i class="ph ph-check"></i> Unlimited SKUs</li>
+                        <li><i class="ph ph-check"></i>
+                        All warehouse zones</li>
+                        <li><i class="ph ph-check"></i>
+                        Live shipment tracking</li>
+                        <li><i class="ph ph-check"></i>
+                        Advanced analytics</li>
+                        <li><i class="ph ph-check"></i>
+                        AI reorder predictions</li>
+                    </ul>
+
+                    <button>
+                        Start Free Trial
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="pricing-card">
+                   <div class="pricing-plan">
+                    <span>ENTERPRISE</span>
+                    <p class="fee">
+                        CUSTOM
+                    </p>
+                    <p class="package">Tailored for large operations</p>
+                </div>
+                
+
+                <div class="pricing-list">
+                    <ul>
+                        <li><i class="ph ph-check"></i> Unlimited everything</li>
+                        <li><i class="ph ph-check"></i>
+                        Dedicated support</li>
+                        <li><i class="ph ph-check"></i>
+                        Custom integrations</li>
+                        <li><i class="ph ph-check"></i>
+                        SLA guarantee</li>
+                        
+                    </ul>
+
+                    <button>
+                        Contact Sales
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="pricing2">
+            <h2>Ready to digitise your warehouse?</h2>
+            <p>Join 2,400+ teams already on StockFlow. Set up in under 10 minutes</p>
+            <div class="pricing2-btn">
+                <a href="" class="pricing2-btn1">Contact Us</a>
+                <a href="" class="pricing2-btn2">Schedule a Demo</a>
+            </div>
+        </div>
+            
+            
+        
+    </section>
+
+
+    <footer>
+
+       
+        <div class="footer1">
+            <div class="footer-logo">
+               <img src="/icons/stockflow-logo.png" alt="">
+               <p>StockFlow</p>
+            </div>
+
+            <ul>
+                <li class="first"><a href="">PRODUCT</a></li>
+                <li><a href="#feature">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="">Changelog</a></li>
+                <li><a href="">Roadmap</a></li>
+            </ul>
+
+             <ul>
+                <li class="first"><a href="">SOLUTION</a></li>
+                <li><a href="">Inventory</a></li>
+                <li><a href="">Logistics</a></li>
+                <li><a href="">Analytics</a></li>
+                <li><a href="">Enterprises</a></li>
+            </ul>
+
+             <ul>
+                <li class="first"><a href="">RESOURCES</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Support</a></li>
+            </ul>
+
+             <ul>
+                <li class="first"> <a href="">COMPANY</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Terms</a></li>
+            </ul>
+            
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2026 <span>STOCK</span>FLOW WMS. All rights reserved.</p>
+            <span class="footer-icons">
+                <a href=""><i class="ph ph-twitter-logo"></i></a>
+                <a href=""><i class="ph ph-linkedin-logo"></i></a>
+                <a href=""><i class="ph ph-instagram-logo"></i></a>
+                <a href=""><i class="ph ph-facebook-logo"></i></a>
+            </span>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

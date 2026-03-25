@@ -71,12 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Other buttons (safe now)
-  if (forgotLink) {
-    forgotLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('Reset link sent!');
-    });
-  }
+  // // Other buttons (safe now)
+  // if (forgotLink) {
+  //   forgotLink.addEventListener('click', function (e) {
+  //     e.preventDefault();
+  //     alert('Reset link sent!');
+  //   });
+  // }
 
 });

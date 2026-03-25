@@ -7,21 +7,20 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: ;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  
 }
 
 /* ===== DASHBOARD CARD ===== */
 .dashboard-card {
   display: flex;
-  width: 960px;
+  width: 100%;
   min-height: 640px;
   background: #f1f4fb;
-  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }

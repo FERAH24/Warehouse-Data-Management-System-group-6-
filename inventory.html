@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
   <title>StockFlow</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -10,7 +11,7 @@
 <body>
 
   <aside class="sidebar">
-
+<!-- 
     <p class="sidebar-section">OVERVIEW</p>
     <nav class="sidebar-nav">
 
@@ -103,8 +104,69 @@
         <p class="user-name">Ama Mensah</p>
         <p class="user-role">Admin</p>
       </div>
-    </div>
+    </div> -->
 
+  
+
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <i class="ph-bold ph-squares-four"></i>
+        </div>
+        StockFlow
+      </div>
+
+      <div class="sidebar-label">Overview</div>
+        <ul class="sidebar-menu">
+        <li >
+          <a href="/StockFlow-dash.html"><i class="ph ph-squares-four"></i> Dashboard</a>
+        </li>
+        <li class="active">
+          <a href="/inventory.html"><i class="ph ph-warehouse"></i> Inventory</a>
+        </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-label">Inventory</div>
+        <ul class="sidebar-menu">
+        <li>
+          <a href="#"><i class="ph ph-list-bullets"></i> All Products <span class="badge">8</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="ph ph-arrow-circle-down"></i> Incoming Goods</a>
+        </li>
+        <li>
+          <a href="#"><i class="ph ph-arrow-circle-up"></i> Outgoing Goods <span class="badge">7</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="ph ph-users"></i> Suppliers</a>
+        </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-label">Reports</div>
+        <ul class="sidebar-menu">
+        <li>
+          <a href="#"><i class="ph ph-chart-bar"></i> Analytics</a>
+        </li>
+        </ul>
+     </div>
+
+      <div class="sidebar-label">System</div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#"><i class="ph ph-gear"></i> Settings</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-user">
+        <div class="user-avatar">AM</div>
+        <div>
+          <div class="user-name">Ama Mensah</div>
+          <div class="user-role">Warehouse Manager</div>
+        </div>
+      </div>
+
+    
   </aside>
 
   <div class="main">
