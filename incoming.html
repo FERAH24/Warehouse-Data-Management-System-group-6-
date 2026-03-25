@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StockFlow - Incoming Goods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar" aria-label="Primary Sidebar Navigation">
+      <div>
+        <div class="sidebar-header">StockFlow</div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Main Menu">
+          <a href="#" class="sidebar-nav-item">Dashboard</a>
+          <a href="#" class="sidebar-nav-item">Inventory</a>
+          <a href="#" class="sidebar-nav-item">All Products</a>
+          <a href="#" class="sidebar-nav-item active" aria-current="page">
+            Incoming Goods
+            <span class="badge-red" aria-label="3 new incoming goods notifications">3</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">Outgoing Goods</a>
+          <a href="#" class="sidebar-nav-item">Security</a>
+          <a href="#" class="sidebar-nav-item disabled" aria-disabled="true" tabindex="-1">Settings</a>
+        </nav>
+      </div>
+      <div class="sidebar-footer" aria-label="User Information">
+        <span class="user-avatar" aria-hidden="true">AA</span>
+        <span>Aina Norukh</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-search" role="search" aria-label="Search incoming goods">
+            <input type="search" placeholder="Search incoming goods..." aria-label="Search incoming goods" id="main-search" />
+            <svg class="icon-search" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M10 2a8 8 0 105.293 14.293l4.293 4.293 1.414-1.414-4.293-4.293A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+            </svg>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn" title="Export data" aria-label="Export data" id="export-btn">
+            Export
+          </button>
+          <button class="icon-btn" title="Record Incoming Goods" aria-label="Record Incoming Goods" id="record-btn">
+            Record Incoming Goods
+          </button>
+          <div class="user-menu-circle" title="User profile" aria-label="User profile A2">A2</div>
+        </div>
+      </header>
+
+      <section class="page-header">
+        Incoming Goods
+      </section>
+
+      <section class="dashboard-cards" aria-label="Incoming goods overview">
+        <div class="card">
+          <div class="card-icon blue" aria-hidden="true">📦</div>
+          <div class="card-content">
+            <div class="card-number" id="total-items">128</div>
+            <div class="card-label">Total Incoming Goods</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon orange" aria-hidden="true">✔️</div>
+          <div class="card-content">
+            <div class="card-number" id="approved-count">15</div>
+            <div class="card-label">Approved Goods</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon green" aria-hidden="true">⏳</div>
+          <div class="card-content">
+            <div class="card-number" id="pending-count">3</div>
+            <div class="card-label">Pending Confirmation</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-panel" aria-label="Record incoming goods and delivery history">
+
+        <form class="form-panel" id="incoming-form" aria-label="Record incoming goods form" novalidate>
+          <fieldset>
+            <legend>Record Incoming Goods</legend>
+
+            <div class="input-group">
+              <label for="product-select">Select Product <span class="required">*</span></label>
+              <select id="product-select" required aria-required="true" aria-describedby="product-help">
+                <option value="" disabled selected>Choose product</option>
+                <option value="Wireless Headphones X200">Wireless Headphones X200</option>
+                <option value="USB-C Hub Pro">USB-C Hub Pro</option>
+                <option value="Laptop 1500 Aluminum">Laptop 1500 Aluminum</option>
+                <option value="Mechanical Keyboard">Mechanical Keyboard</option>
+              </select>
+              <div id="product-help" class="helper-text">Choose a product from the list</div>
+            </div>
+
+            <div class="input-group">
+              <label for="supplier-input">Supplier <span class="required">*</span></label>
+              <input type="text" id="supplier-input" placeholder="TechSolutions Ltd" required aria-required="true" />
+            </div>
+
+            <div class="input-row">
+              <div class="input-group half-width">
+                <label for="delivery-date-input">Delivery Date <span class="required">*</span></label>
+                <input type="date" id="delivery-date-input" required aria-required="true" />
+              </div>
+              <div class="input-group half-width">
+                <label for="quantity-received-input">Quantity Received <span class="required">*</span></label>
+                <input type="number" id="quantity-received-input" min="1" max="9999" step="1" placeholder="120" required aria-required="true"/>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group half-width">
+                <label for="warehouse-location-input">Warehouse Location <span class="required">*</span></label>
+                <input type="text" id="warehouse-location-input" placeholder="Zone A - Bay 2" required aria-required="true" />
+              </div>
+              <div class="input-group half-width">
+                <label for="reference-input">Reference / PO Number <span class="required">*</span></label>
+                <input type="text" id="reference-input" placeholder="A-9 985512 0043" required aria-required="true" />
+              </div>
+            </div>
+            
+            <div class="input-group">
+              <label for="notes-input">Notes</label>
+              <textarea id="notes-input" rows="3" placeholder="Any additional delivery notes..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary" id="clear-btn" aria-label="Clear the form">Clear</button>
+              <button type="submit" class="btn-primary" id="save-btn" aria-label="Save entry">Save Entry</button>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="delivery-panel" aria-label="Delivery history panel">
+          <div class="delivery-header">
+            <input type="search" id="delivery-search" placeholder="Search deliveries..." aria-label="Search deliveries in history" />
+            <button class="filter-btn" id="filter-btn" aria-label="Filter delivery history">Filter</button>
+          </div>
+
+          <table class="delivery-table" role="table" aria-label="Delivery history table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Supplier</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="delivery-tbody">
+              <!-- Entries rendered by JS -->
+            </tbody>
+          </table>
+
+          <div class="pagination-container" id="pagination" role="navigation" aria-label="Delivery history pagination"></div>
+
+          <div class="delivery-detail" id="delivery-detail" tabindex="0" aria-live="polite" aria-atomic="true">
+            Select a delivery entry to view details.
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
