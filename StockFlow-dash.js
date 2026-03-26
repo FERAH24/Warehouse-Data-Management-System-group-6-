@@ -1,5 +1,35 @@
 // ===== DASHBOARD PAGE JAVASCRIPT =====
 
+// ===== DUMMY / FALLBACK DATA =====
+var DUMMY_DATA = {
+  cards: { totalSKUs: 124, totalUnits: 8450, lowStock: 18, critical: 5 },
+  inventorySummary: [
+    { zone: "Zone A", totalStock: 2100, capacity: "72%", status: "In Stock" },
+    { zone: "Zone B", totalStock: 1540, capacity: "53%", status: "In Stock" },
+    { zone: "Zone C", totalStock:  480, capacity: "18%", status: "Low Stock" },
+    { zone: "Zone D", totalStock: 3200, capacity: "85%", status: "In Stock" },
+    { zone: "Zone E", totalStock:  130, capacity:  "9%", status: "Low Stock" },
+  ],
+  chart: {
+    incoming: [
+      { month: "2025-01-01", totalIncoming: 320 },
+      { month: "2025-02-01", totalIncoming: 410 },
+      { month: "2025-03-01", totalIncoming: 290 },
+      { month: "2025-04-01", totalIncoming: 530 },
+      { month: "2025-05-01", totalIncoming: 480 },
+      { month: "2025-06-01", totalIncoming: 610 },
+    ],
+    outgoing: [
+      { month: "2025-01-01", totalOutgoing: 210 },
+      { month: "2025-02-01", totalOutgoing: 380 },
+      { month: "2025-03-01", totalOutgoing: 250 },
+      { month: "2025-04-01", totalOutgoing: 490 },
+      { month: "2025-05-01", totalOutgoing: 320 },
+      { month: "2025-06-01", totalOutgoing: 570 },
+    ],
+  },
+};
+
 // ===== 1. FETCH REPORT DATA AND POPULATE DASHBOARD =====
 
 var ZONE_COLORS = {
@@ -20,6 +50,14 @@ fetch("https://stock-flow-k866.onrender.com/api/reports", {
     return res.json();
   })
   .then(function (data) {
+    populateDashboard(data);
+  })
+  .catch(function () {
+    // Fallback — show dummy data when API is unreachable
+    populateDashboard(DUMMY_DATA);
+  });
+
+function populateDashboard(data) {
     // --- Stat Cards ---
     countUp("count1", data.cards.totalSKUs);
     countUp("count2", data.cards.totalUnits);
@@ -99,14 +137,7 @@ fetch("https://stock-flow-k866.onrender.com/api/reports", {
 
     // --- Stock Movement Chart ---
     buildChart(data.chart);
-  })
-  .catch(function () {
-    // Fallback — show zeros if API fails
-    countUp("count1", 0);
-    countUp("count2", 0);
-    countUp("count3", 0);
-    countUp("count4", 0);
-  });
+}
 
 // ===== 2. BUILD THE CHART BARS =====
 
