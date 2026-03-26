@@ -87,97 +87,90 @@
 </body>
 </html> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="login.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <span class="top-label"></span>
 
-  <span class="top-label"></span>
-
-  <div class="card">
-
-    
-    <div class="left">
-      <div class="logo">
-        <div class="logo-icon">
-          <span></span><span></span>
-          <span></span><span></span>
+    <div class="card">
+      <div class="left">
+        <div class="logo">
+          <div class="logo-icon">
+            <span></span><span></span> <span></span><span></span>
+          </div>
+          <span class="logo-text">StockFlow</span>
         </div>
-        <span class="logo-text">StockFlow</span>
+        <p class="tagline">See Your Stock,&nbsp; Own your Flow</p>
+        <button class="know-more-btn">Know More →</button>
       </div>
-      <p class="tagline">See Your Stock,&nbsp; Own your Flow</p>
-      <button class="know-more-btn">Know More →</button>
-    </div>
 
-   
-    <div class="right">
-      <a href="#" class="back-link">← Back to home</a>
+      <div class="right">
+        <a href="#" class="back-link">← Back to home</a>
 
-      <h1 class="form-title">Create your account</h1>
-      <p class="already">Already have one? <a href="#">Sign In</a></p>
+        <h1 class="form-title">Create your account</h1>
+        <p class="already">Already have one? <a href="#">Sign In</a></p>
 
-      <div class="name-row">
-        <div class="field">
-          <label>First Name</label>
-          <div class="input-wrap">
-            <span class="icon">&#128100;</span>
-            <input type="text" placeholder="John"/>
+        <div class="name-row">
+          <div class="field">
+            <label>First Name</label>
+            <div class="input-wrap">
+              <span class="icon">&#128100;</span>
+              <input type="text" id="firstName" placeholder="John" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <div class="input-wrap">
+              <span class="icon">&#128100;</span>
+              <input type="text" id="lastName" placeholder="Moment" />
+            </div>
           </div>
         </div>
+
         <div class="field">
-          <label>Last Name</label>
+          <label>Email</label>
           <div class="input-wrap">
-            <span class="icon">&#128100;</span>
-            <input type="text" placeholder="Moment"/>
+            <span class="icon">&#9993;</span>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Work Email"
+            />
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label>Email</label>
-        <div class="input-wrap">
-          <span class="icon">&#9993;</span>
-          <input type="email" placeholder="Enter your Work Email"/>
+        <div class="field">
+          <label>Password</label>
+          <div class="input-wrap">
+            <span class="icon">&#128274;</span>
+            <input type="password" id="pwd" placeholder="Min. 8 characters" />
+            <button class="eye-btn" onclick="togglePwd()" type="button">
+              &#128065;
+            </button>
+          </div>
         </div>
+
+        <span class="error-msg" id="register-error"></span>
+
+        <button class="continue-btn" id="register-btn">Continue →</button>
+
+        <p class="terms">
+          By continuing you agree to our <a href="#">Terms</a> &amp;
+          <a href="#">Privacy Policy</a>
+        </p>
       </div>
-
-      <div class="field">
-        <label>Password</label>
-        <div class="input-wrap">
-          <span class="icon">&#128274;</span>
-          <input type="password" id="pwd" placeholder="Min. 8 characters"/>
-          <button class="eye-btn" onclick="togglePwd()" type="button">&#128065;</button>
-        </div>
-      </div>
-      <p class="hint">Enter a password</p>
-
-      <button class="continue-btn">Continue →</button>
-
-      <p class="terms">
-        By continuing you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>
-      </p>
     </div>
 
-  </div>
-
-  <script src="login.js"></script>
-</body>
+    <script src="register.js"></script>
+  </body>
 </html>

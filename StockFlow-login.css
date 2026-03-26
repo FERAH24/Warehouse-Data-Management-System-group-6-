@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,12 +28,12 @@ body {
 /* ===== LEFT SIDE ===== */
 .left-side {
   width: 50%;
- background: linear-gradient(45deg,
-    
+  background: linear-gradient(
+    45deg,
     #562561 20%,
-    #193073 ,
+    #193073,
     #021b79 70%,
-    #BE202F
+    #be202f
   );
   padding: 40px 30px;
   display: flex;
@@ -48,7 +48,7 @@ body {
   color: white;
   font-size: 28px;
   font-weight: 700;
-  margin: 6% 0px 0px 10% ;
+  margin: 6% 0px 0px 10%;
 }
 
 .logo-box {
@@ -66,7 +66,7 @@ body {
 .tagline {
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
-    margin: 0% 0px 0px 10% ;
+  margin: 0% 0px 0px 10%;
 }
 
 .know-more-btn {
@@ -81,7 +81,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-    margin: 0% 0px 0px 10% ;
+  margin: 0% 0px 0px 10%;
 }
 
 .know-more-btn:hover {
@@ -91,7 +91,7 @@ body {
 /* ===== RIGHT SIDE ===== */
 .right-side {
   width: 40%;
-  padding: 40px 20px 40px 50px ;
+  padding: 40px 20px 40px 50px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -147,7 +147,7 @@ body {
   font-size: 13px;
   width: 100%;
   color: #333;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .input-box input::placeholder {
@@ -166,11 +166,15 @@ body {
   display: none;
 }
 
+.error-msg.success {
+  color: #16a34a;
+}
+
 /* ===== LOGIN BUTTON ===== */
 .login-btn {
   width: 100%;
   padding: 12px;
-  background:#193073;
+  background: #193073;
   color: white;
   border: none;
   border-radius: 8px;
@@ -178,10 +182,10 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-top: 4px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.login-btn a{
+.login-btn a {
   text-decoration: none;
   color: white;
   font-size: 14px;
@@ -217,7 +221,7 @@ body {
 
 .divider::before,
 .divider::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   width: 42%;
@@ -225,8 +229,12 @@ body {
   background: #ddd;
 }
 
-.divider::before { left: 0; }
-.divider::after  { right: 0; }
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+}
 
 /* ===== SOCIAL BUTTONS ===== */
 .social-buttons {
@@ -247,7 +255,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #333;
 }
 
@@ -256,7 +264,7 @@ body {
   background: #f5f7ff;
 }
 
-#apple-btn i{
+#apple-btn i {
   font-size: 18px;
   font-weight: 600;
 }

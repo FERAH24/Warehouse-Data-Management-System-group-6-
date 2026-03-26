@@ -1,87 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StockFlow - Login</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockFlow - Login</title>
 
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
 
-  <!-- CSS file -->
-  <link rel="stylesheet" href="StockFlow-login.css" />
-</head>
-<body>
-
-  <div class="login-card">
-
-    <!-- LEFT SIDE -->
-    <div class="left-side">
-      <div class="logo">
-        <div class="logo-box">
-       <img src="/icons/stockflow-logo.png" alt="">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="StockFlow-login.css" />
+  </head>
+  <body>
+    <div class="login-card">
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+        <div class="logo">
+          <div class="logo-box">
+            <img src="/icons/stockflow-logo.png" alt="" />
+          </div>
+          StockFlow
         </div>
-        StockFlow
+
+        <p class="tagline">See Your Stock, Own your Flow</p>
+
+        <a href="#" class="know-more-btn">Know More →</a>
       </div>
 
-      <p class="tagline">See Your Stock, Own your Flow</p>
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+        <h2>Welcome Back!</h2>
+        <p>Please enter your log in details below</p>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
 
-      <a href="#" class="know-more-btn">Know More →</a>
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-box">
+            <i class="ph ph-envelope"></i>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Work Email..."
+            />
+          </div>
+          <span class="error-msg" id="email-error"
+            >Please enter a valid email.</span
+          >
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-box">
+            <i class="ph ph-lock"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your Password"
+            />
+          </div>
+          <span class="error-msg" id="pass-error"
+            >Password must be at least 6 characters.</span
+          >
+        </div>
+
+        <!-- Login Error -->
+        <span class="error-msg" id="login-error"></span>
+
+        <!-- Login Button -->
+        <button class="login-btn" id="login-btn">Login</button>
+
+        <!-- Forgot Password -->
+        <a href="/forgottenpassword.html" class="forgot" id="forgot-link"
+          >Forgot Password?</a
+        >
+
+        <!-- OR Divider -->
+        <div class="divider">Or</div>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons">
+          <button class="social-btn" id="google-btn">
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              width="16"
+              height="16"
+              alt="Google"
+            />
+            Sign in with Google
+          </button>
+          <button class="social-btn" id="apple-btn">
+            <i class="ph ph-apple-logo"></i>
+            Sign in with Apple
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div class="right-side">
-      <h2>Welcome Back!</h2>
-      <p>Please enter your log in details below</p>
-
-      <!-- Email Field -->
-      <div class="form-group">
-        <label for="email">Email</label>
-        <div class="input-box">
-          <i class="ph ph-envelope"></i>
-          <input type="email" id="email" placeholder="Enter your Work Email..." />
-        </div>
-        <span class="error-msg" id="email-error">Please enter a valid email.</span>
-      </div>
-
-      <!-- Password Field -->
-      <div class="form-group">
-        <label for="password">Password</label>
-        <div class="input-box">
-          <i class="ph ph-lock"></i>
-          <input type="password" id="password" placeholder="Enter your Password" />
-        </div>
-        <span class="error-msg" id="pass-error">Password must be at least 6 characters.</span>
-      </div>
-
-      <!-- Login Button -->
-      <button class="login-btn" id="login-btn"> <a href="/StockFlow-dash.html">Login</a></button>
-
-      <!-- Forgot Password -->
-      <a href="/forgottenpassword.html" class="forgot" id="forgot-link">Forgot Password?</a>
-
-      <!-- OR Divider -->
-      <div class="divider">Or</div>
-
-      <!-- Social Buttons -->
-      <div class="social-buttons">
-        <button class="social-btn" id="google-btn">
-          <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="16" height="16" alt="Google" />
-          Sign in with Google
-        </button>
-        <button class="social-btn" id="apple-btn">
-          <i class="ph ph-apple-logo"></i>
-          Sign in with Apple
-        </button>
-      </div>
-
- 
-    </div>
-
-  </div>
-
-  <!-- JS file -->
-  <script src="stockFlow-login.js"></script>
-
-</body>
+    <!-- JS file -->
+    <script src="stockFlow-login.js"></script>
+  </body>
 </html>
