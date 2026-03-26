@@ -40,36 +40,69 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isValid) {
       loginBtn.textContent = 'Logging in...';
       loginBtn.disabled = true;
+      
+fetch("https://stock-flow-k866.onrender.com/auth/login", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ email, password }),
+  credentials: "include" // IMPORTANT (keeps cookie)
+})
+.then(res => res.json())
+.then(data => {
+  console.log("LOGIN RESPONSE:", data);
 
-      fetch("https://stock-flow-k866.onrender.com/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email: email, password: password })
-      })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-
-        if (data && data.token) {
-          localStorage.setItem("token", data.token);
-          window.location.href = "stockFlow-dash.html";
-        } else {
-          alert("Login failed.");
-          loginBtn.textContent = 'Log in';
-          loginBtn.disabled = false;
-        }
-
-      })
-      .catch(function () {
-        alert("Network error");
-        loginBtn.textContent = 'Log in';
-        loginBtn.disabled = false;
-      });
+  if (data.message === "LOGIN SUCCESSFUL") {
+    window.location.href = "stockFlow-dash.html";
+  } else {
+    alert(data.message || "Login failed");
+  }
+})
+.catch(() => {
+  alert("Network error");
+});
     }
   });
+
+  // Other buttons (safe now)
+  if (forgotLink) {
+    forgotLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      alert('Reset link sent!');
+    });
+  }
+
+});
+   //   fetch("https://stock-flow-k866.onrender.com/auth/login", {
+     //   method: "POST",
+      //  headers: {
+    //      "Content-Type": "application/json"
+     //   },
+    //    body: JSON.stringify({ email: email, password: password })
+//      })
+  //    .then(function (response) {
+//        return response.json();
+  //    })
+   //   .then(function (data) {
+
+   //     if (data && data.token) {
+    //      localStorage.setItem("token", data.token);
+    //      window.location.href = "stockFlow-dash.html";
+   //     } else {
+    //      alert("Login failed.");
+   //       loginBtn.textContent = 'Log in';
+    //      loginBtn.disabled = false;
+   //     }
+
+ //     })
+    //  .catch(function () {
+    //    alert("Network error");
+    //    loginBtn.textContent = 'Log in';
+     //   loginBtn.disabled = false;
+    //  });
+  //  }
+//  });
 
   // // Other buttons (safe now)
   // if (forgotLink) {
