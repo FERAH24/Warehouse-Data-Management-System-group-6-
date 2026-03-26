@@ -6,9 +6,9 @@ var DUMMY_DATA = {
   inventorySummary: [
     { zone: "Zone A", totalStock: 2100, capacity: "72%", status: "In Stock" },
     { zone: "Zone B", totalStock: 1540, capacity: "53%", status: "In Stock" },
-    { zone: "Zone C", totalStock:  480, capacity: "18%", status: "Low Stock" },
+    { zone: "Zone C", totalStock: 480, capacity: "18%", status: "Low Stock" },
     { zone: "Zone D", totalStock: 3200, capacity: "85%", status: "In Stock" },
-    { zone: "Zone E", totalStock:  130, capacity:  "9%", status: "Low Stock" },
+    { zone: "Zone E", totalStock: 130, capacity: "9%", status: "Low Stock" },
   ],
   chart: {
     incoming: [
@@ -58,85 +58,85 @@ fetch("https://stock-flow-k866.onrender.com/api/reports", {
   });
 
 function populateDashboard(data) {
-    // --- Stat Cards ---
-    countUp("count1", data.cards.totalSKUs);
-    countUp("count2", data.cards.totalUnits);
-    countUp("count3", data.cards.lowStock);
-    countUp("count4", data.cards.critical);
+  // --- Stat Cards ---
+  countUp("count1", data.cards.totalSKUs);
+  countUp("count2", data.cards.totalUnits);
+  countUp("count3", data.cards.lowStock);
+  countUp("count4", data.cards.critical);
 
-    // --- Inventory Table ---
-    var tbody = document.getElementById("inv-tbody");
-    tbody.innerHTML = "";
+  // --- Inventory Table ---
+  var tbody = document.getElementById("inv-tbody");
+  tbody.innerHTML = "";
 
-    data.inventorySummary.forEach(function (item) {
-      var capNum = parseInt(item.capacity) || 0;
-      var statusClass =
-        item.status === "In Stock"
-          ? "in-stock"
-          : item.status === "Low Stock"
-            ? "low-stock"
-            : "out-stock";
-      var fillColor = capNum > 60 ? "green" : capNum > 20 ? "blue" : "red";
+  data.inventorySummary.forEach(function (item) {
+    var capNum = parseInt(item.capacity) || 0;
+    var statusClass =
+      item.status === "In Stock"
+        ? "in-stock"
+        : item.status === "Low Stock"
+          ? "low-stock"
+          : "out-stock";
+    var fillColor = capNum > 60 ? "green" : capNum > 20 ? "blue" : "red";
 
-      var tr = document.createElement("tr");
-      tr.innerHTML =
-        '<td><span class="zone-pill">' +
-        item.zone +
-        "</span></td>" +
-        "<td>" +
-        item.totalStock.toLocaleString() +
-        "</td>" +
-        '<td><div class="cap-bar-wrap"><div class="cap-bar"><div class="cap-fill ' +
-        fillColor +
-        '" style="width: ' +
-        capNum +
-        '%"></div></div><span class="cap-pct">' +
-        item.capacity +
-        "</span></div></td>" +
-        '<td><span class="status-pill ' +
-        statusClass +
-        '">' +
-        item.status +
-        "</span></td>";
-      tbody.appendChild(tr);
-    });
+    var tr = document.createElement("tr");
+    tr.innerHTML =
+      '<td><span class="zone-pill">' +
+      item.zone +
+      "</span></td>" +
+      "<td>" +
+      item.totalStock.toLocaleString() +
+      "</td>" +
+      '<td><div class="cap-bar-wrap"><div class="cap-bar"><div class="cap-fill ' +
+      fillColor +
+      '" style="width: ' +
+      capNum +
+      '%"></div></div><span class="cap-pct">' +
+      item.capacity +
+      "</span></div></td>" +
+      '<td><span class="status-pill ' +
+      statusClass +
+      '">' +
+      item.status +
+      "</span></td>";
+    tbody.appendChild(tr);
+  });
 
-    // --- Zone Capacity ---
-    var zoneList = document.getElementById("zone-list");
-    zoneList.innerHTML = "";
+  // --- Zone Capacity ---
+  var zoneList = document.getElementById("zone-list");
+  zoneList.innerHTML = "";
 
-    data.inventorySummary.forEach(function (item) {
-      var capNum = parseInt(item.capacity) || 0;
-      var color = ZONE_COLORS[item.zone] || "#6b7280";
+  data.inventorySummary.forEach(function (item) {
+    var capNum = parseInt(item.capacity) || 0;
+    var color = ZONE_COLORS[item.zone] || "#6b7280";
 
-      var div = document.createElement("div");
-      div.innerHTML =
-        '<div class="zone-row-top">' +
-        '<div class="zone-dot" style="background: ' +
-        color +
-        ';"></div>' +
-        '<span class="zone-name">' +
-        item.zone +
-        "</span>" +
-        '<span class="zone-pct" style="color: ' +
-        color +
-        ';">' +
-        item.capacity +
-        "</span>" +
-        "</div>" +
-        '<div class="zone-slots">' +
-        item.totalStock.toLocaleString() +
-        " units</div>" +
-        '<div class="zone-bar"><div class="zone-bar-fill" style="width: ' +
-        capNum +
-        "%; background: " +
-        color +
-        ';"></div></div>';
-      zoneList.appendChild(div);
-    });
+    var div = document.createElement("div");
+    div.innerHTML =
+      '<div class="zone-row-top">' +
+      '<div class="zone-dot" style="background: ' +
+      color +
+      ';"></div>' +
+      '<span class="zone-name">' +
+      item.zone +
+      "</span>" +
+      '<span class="zone-pct" style="color: ' +
+      color +
+      ';">' +
+      item.capacity +
+      "</span>" +
+      "</div>" +
+      '<div class="zone-slots">' +
+      item.totalStock.toLocaleString() +
+      " units</div>" +
+      '<div class="zone-bar"><div class="zone-bar-fill" style="width: ' +
+      capNum +
+      "%; background: " +
+      color +
+      ';"></div></div>';
+    zoneList.appendChild(div);
+  });
 
-    // --- Stock Movement Chart ---
-    buildChart(data.chart);
+  // --- Stock Movement Chart ---
+  buildChart(data.chart);
 }
 
 // ===== 2. BUILD THE CHART BARS =====
